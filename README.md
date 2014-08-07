@@ -35,7 +35,7 @@ cd vim-colors-solarized/colors
 mv solarized.vim ~/.vim/colors/
 ```
 
-# Git setup
+## Git setup
 
 ```
 cp .gitignore_global ~
