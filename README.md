@@ -40,6 +40,7 @@ mv solarized.vim ~/.vim/colors/
 ```
 cp .gitignore_global ~
 git config --global core.excludesfile ~/.gitignore_global
+git config --global color.ui true
 ```
 
 [1]: http://ethanschoonover.com/solarized
