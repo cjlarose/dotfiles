@@ -48,6 +48,7 @@ cp .tmux.conf ~
 cp .gitignore_global ~
 git config --global core.excludesfile ~/.gitignore_global
 git config --global color.ui true
+git config --global core.editor vim
 ```
 
 [1]: http://ethanschoonover.com/solarized
