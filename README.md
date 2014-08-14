@@ -35,6 +35,13 @@ cd vim-colors-solarized/colors
 mv solarized.vim ~/.vim/colors/
 ```
 
+* Tmux
+
+```
+brew install tmux
+cp .tmux.conf ~
+```
+
 ## Git setup
 
 ```

@@ -16,6 +16,9 @@ set softtabstop=2	" Number of spaces per Tab
 
 syntax enable           " Enable syntax highlighting
 set background=dark
+
+" Solarized options
+set t_Co=256
 colorscheme solarized
  
 set ruler	        " Show row and column ruler information
