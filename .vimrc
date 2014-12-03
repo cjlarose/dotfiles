@@ -27,6 +27,10 @@ set backspace=indent,eol,start	" Backspace behaviour
  
 set colorcolumn=80      " Colored line at 80-chars
 
+" Highlight anything in red over 120 columns
+highlight OverLength ctermbg=red guibg=darkred
+match OverLength /\%<121v.\%>120v/
+
 set relativenumber      " Enabling both relative number and number turns on hybrid mode
 set number
 
