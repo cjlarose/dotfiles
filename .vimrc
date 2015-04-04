@@ -9,10 +9,10 @@ set incsearch	        " Searches for strings incrementally
  
 set autoindent	        " Auto-indent new lines
 set expandtab	        " Use spaces instead of tabs
-set shiftwidth=2	" Number of auto-indent spaces
+set shiftwidth=4	" Number of auto-indent spaces
 set smartindent	        " Enable smart-indent
 set smarttab	        " Enable smart-tabs
-set softtabstop=2	" Number of spaces per Tab
+set softtabstop=4	" Number of spaces per Tab
 
 syntax enable           " Enable syntax highlighting
 set background=dark
@@ -42,3 +42,5 @@ augroup myvimrc
 augroup END
 
 autocmd FileType make setlocal noexpandtab " Tabs in makefiles
+autocmd FileType ruby setlocal shiftwidth=2
+autocmd FileType ruby setlocal softtabstop=2
