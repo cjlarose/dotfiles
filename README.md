@@ -30,19 +30,26 @@
 
 [iterm]: http://iterm2.com/
 [solarized]: http://ethanschoonover.com/solarized
-[neovim-install]: https://github.com/neovim/neovim/wiki/Installing-Neovim<Paste>
+[neovim-install]: https://github.com/neovim/neovim/wiki/Installing-Neovim
 
-    mkdir -p ~/.config/nvim
-    cp .vimrc ~/.config/nvim
+```
+mkdir -p ~/.config/nvim
+cp .vimrc ~/.config/nvim
+```
 
 * Tmux
 
-    brew install tmux
-    cp .tmux.conf ~
+```
+brew install tmux
+cp .tmux.conf ~
+```
+
 
 ## Git setup
 
-    cp .gitignore_global ~
-    git config --global core.excludesfile ~/.gitignore_global
-    git config --global color.ui true
-    git config --global core.editor vim
+```
+cp .gitignore_global ~
+git config --global core.excludesfile ~/.gitignore_global
+git config --global color.ui true
+git config --global core.editor vim
+```
