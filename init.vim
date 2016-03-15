@@ -43,5 +43,5 @@ set expandtab
 " Write exactly 2 spaces when hitting <tab>
 set tabstop=2
 
-" Use 2 spaces for indendation
+" Use 2 spaces for indentation
 set shiftwidth=2
