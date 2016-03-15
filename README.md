@@ -37,6 +37,13 @@ mkdir -p ~/.config/nvim
 cp .vimrc ~/.config/nvim
 ```
 
+* Install vim-plug. Remember to run `:PlugInstall`
+
+```
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 * Tmux
 
 ```
