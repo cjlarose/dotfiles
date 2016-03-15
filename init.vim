@@ -10,6 +10,9 @@ Plug 'benekastah/neomake'
 " Solarized color scheme
 Plug 'altercation/vim-colors-solarized'
 
+" Fuzzy file finder
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -30,3 +33,6 @@ map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR
 " Enable both relative number and number to turn on 'hybrid mode'
 set relativenumber      
 set number
+
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
