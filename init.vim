@@ -13,6 +13,9 @@ Plug 'altercation/vim-colors-solarized'
 " Fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Git integration
+Plug 'tpope/vim-fugitive'
+
 " Add plugins to &runtimepath
 call plug#end()
 
