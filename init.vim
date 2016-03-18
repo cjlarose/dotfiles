@@ -4,6 +4,9 @@ call plug#begin('~/.vim/plugged')
 " General Ruby shit
 Plug 'vim-ruby/vim-ruby'
 
+" JavaScript syntax & indentation
+Plug 'pangloss/vim-javascript'
+
 " Async make. Syntax highlighting mostly
 Plug 'benekastah/neomake'
 
