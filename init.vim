@@ -7,7 +7,7 @@ Plug 'vim-ruby/vim-ruby'
 " JavaScript syntax & indentation
 Plug 'pangloss/vim-javascript'
 
-" Async make. Syntax highlighting mostly
+" Async make. Linting mostly
 Plug 'benekastah/neomake'
 
 " Solarized color scheme
