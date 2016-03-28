@@ -14,7 +14,7 @@ Plug 'benekastah/neomake'
 Plug 'altercation/vim-colors-solarized'
 
 " Fuzzy file finder
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -40,9 +40,6 @@ map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR
 set relativenumber
 set number
 
-" Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
 " Write spaces instead of tabs when hitting <tab>
 set expandtab
 
@@ -51,3 +48,5 @@ set tabstop=2
 
 " Use 2 spaces for indentation
 set shiftwidth=2
+
+nnoremap <leader>t :FZF<CR>
