@@ -49,4 +49,5 @@ set tabstop=2
 " Use 2 spaces for indentation
 set shiftwidth=2
 
+" Key mappings for fzf plugin
 nnoremap <leader>t :FZF<CR>
