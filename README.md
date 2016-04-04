@@ -44,6 +44,12 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+* Install `ag`. For use with `fzf`.
+
+```
+brew install ag
+```
+
 * Tmux
 
 ```

@@ -55,6 +55,9 @@ set shiftwidth=2
 " Key mappings for fzf plugin
 nnoremap <leader>t :FZF<CR>
 
+" Respect .gitignore in fzf
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
 " Buffergator settings
 let g:buffergator_suppress_keymaps = 1
 nmap <leader>jj :BuffergatorMruCyclePrev<cr>
