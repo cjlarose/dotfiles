@@ -2,10 +2,14 @@
 
 ## Basic development necessities
 
-* [Xcode][xcode]
+* Install Xcode command-line utilities
+
+```
+xcode-select --install
+```
+
 * [Homebrew][brew]
 
-[xcode]: https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
 [brew]: http://brew.sh/
 
 ## Virtualization
