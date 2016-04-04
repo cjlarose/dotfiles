@@ -38,7 +38,7 @@ xcode-select --install
 
 ```
 mkdir -p ~/.config/nvim
-ln -s init.vim ~/.config/nvim/init.vim
+ln -s $PWD/init.vim ~/.config/nvim/init.vim
 ```
 
 * Install vim-plug. Remember to run `:PlugInstall`
