@@ -34,7 +34,7 @@
 
 ```
 mkdir -p ~/.config/nvim
-cp .vimrc ~/.config/nvim
+ln -s init.vim ~/.config/nvim/init.vim
 ```
 
 * Install vim-plug. Remember to run `:PlugInstall`
