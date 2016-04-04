@@ -26,6 +26,12 @@ xcode-select --install
 [dropbox]: https://www.dropbox.com/
 [1password]: https://itunes.apple.com/us/app/1password-password-manager/id443987910?mt=12
 
+## Shell setup
+
+Download and install [prezto][prezto].
+
+[prezto]: https://github.com/sorin-ionescu/prezto
+
 ## Terminal & vim setup
 
 * [iTerm2][iterm]
