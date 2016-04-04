@@ -1,5 +1,5 @@
 " Start loading plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " General Ruby shit
 Plug 'vim-ruby/vim-ruby'
