@@ -64,7 +64,7 @@ brew install ag
 
 ```
 brew install tmux
-cp .tmux.conf ~
+ln -s $PWD/.tmux.conf ~/.tmux.conf
 ```
 
 
