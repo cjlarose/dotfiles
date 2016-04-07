@@ -65,3 +65,6 @@ nmap <leader>kk :BuffergatorMruCycleNext<cr>
 nmap <leader>bl :BuffergatorOpen<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
+
+" Hide terminal buffers instead of closing them and terminating the process
+autocmd TermOpen * set bufhidden=hide
