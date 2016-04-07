@@ -71,7 +71,7 @@ ln -s $PWD/.tmux.conf ~/.tmux.conf
 ## Git setup
 
 ```
-git config --global core.excludesfile .gitignore_global
+git config --global core.excludesfile $PWD/.gitignore_global
 git config --global color.ui true
 git config --global core.editor nvim
 ```
