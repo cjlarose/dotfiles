@@ -28,13 +28,6 @@ call plug#end()
 " Map leader key to ,
 let mapleader = ","
 
-" Run neomake on every write
-autocmd! BufWritePost * Neomake
-
-" Turn on solarized
-set background=dark
-colorscheme solarized
-
 " Enable swapping background quickly
 " http://tilvim.com/2013/07/31/swapping-bg.html
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
@@ -52,6 +45,20 @@ set tabstop=2
 " Use 2 spaces for indentation
 set shiftwidth=2
 
+" Hide terminal buffers instead of closing them and terminating the process
+autocmd TermOpen * set bufhidden=hide
+
+""""""""""""""""""""""""
+" PLUGIN CONFIGURATION "
+""""""""""""""""""""""""
+
+" Run neomake on every write
+autocmd! BufWritePost * Neomake
+
+" Turn on solarized
+set background=dark
+colorscheme solarized
+
 " Key mappings for fzf plugin
 nnoremap <leader>t :FZF<CR>
 
@@ -65,6 +72,3 @@ nmap <leader>kk :BuffergatorMruCycleNext<cr>
 nmap <leader>bl :BuffergatorOpen<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
-
-" Hide terminal buffers instead of closing them and terminating the process
-autocmd TermOpen * set bufhidden=hide
