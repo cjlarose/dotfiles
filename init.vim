@@ -15,12 +15,10 @@ Plug 'altercation/vim-colors-solarized'
 
 " Fuzzy file finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
-
-" Buffer management
-Plug 'jeetsukumaran/vim-buffergator'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -60,15 +58,8 @@ set background=dark
 colorscheme solarized
 
 " Key mappings for fzf plugin
-nnoremap <leader>t :FZF<CR>
+nmap <leader>t :FZF<CR>
+nmap <leader>bb :Buffers<CR>
 
 " Respect .gitignore in fzf
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
-
-" Buffergator settings
-let g:buffergator_suppress_keymaps = 1
-nmap <leader>jj :BuffergatorMruCyclePrev<cr>
-nmap <leader>kk :BuffergatorMruCycleNext<cr>
-nmap <leader>bl :BuffergatorOpen<cr>
-nmap <leader>T :enew<cr>
-nmap <leader>bq :bp <BAR> bd #<cr>
