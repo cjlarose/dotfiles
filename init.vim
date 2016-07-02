@@ -46,6 +46,12 @@ set shiftwidth=2
 " Hide terminal buffers instead of closing them and terminating the process
 autocmd TermOpen * set bufhidden=hide
 
+" Disable escape key (use ^C instead)
+inoremap <esc> <NOP>
+
+" Replace hash rockets with Ruby 1.9-style hashes
+let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
