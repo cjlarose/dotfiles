@@ -60,7 +60,7 @@ let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
 autocmd! BufWritePost * Neomake
 
 " Turn on solarized
-set background=dark
+set background=light
 colorscheme solarized
 
 " Key mappings for fzf plugin
