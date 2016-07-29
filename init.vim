@@ -20,6 +20,9 @@ Plug 'junegunn/fzf.vim'
 " Git integration
 Plug 'tpope/vim-fugitive'
 
+" Ack/Ag integration
+Plug 'mileszs/ack.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -69,3 +72,8 @@ nmap <leader>bb :Buffers<CR>
 
 " Respect .gitignore in fzf
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
+" Make ack.vim use ag instead
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
