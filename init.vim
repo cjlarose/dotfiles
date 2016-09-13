@@ -55,6 +55,9 @@ inoremap <esc> <NOP>
 " Replace hash rockets with Ruby 1.9-style hashes
 let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
 
+" Show whitespace characters (tabs, trailing spaces)
+set list
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
