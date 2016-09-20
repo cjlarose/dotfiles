@@ -80,3 +80,18 @@ let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" Shortcut for Ack!
+nmap <leader>f :Ack!<space>
+
+" Modify ack.vim mappings
+let g:ack_mappings = {
+  \ "t": "<C-W><CR><C-W>T",
+  \ "T": "<C-W><CR><C-W>TgT<C-W>j",
+  \ "o": "<CR>",
+  \ "O": "<CR><C-W><C-W>:ccl<CR>",
+  \ "go": "<CR><C-W>j",
+  \ "<C-X>": "<C-W><CR><C-W>K",
+  \ "H": "<C-W><CR><C-W>K<C-W>b",
+  \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t",
+  \ "gv": "<C-W><CR><C-W>H<C-W>b<C-W>J" }
