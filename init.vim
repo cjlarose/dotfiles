@@ -66,7 +66,7 @@ set list
 autocmd! BufWritePost * Neomake
 
 " Turn on solarized
-set background=light
+set background=dark
 colorscheme solarized
 
 " Key mappings for fzf plugin
