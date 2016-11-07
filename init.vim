@@ -7,6 +7,9 @@ Plug 'vim-ruby/vim-ruby'
 " JavaScript syntax & indentation
 Plug 'pangloss/vim-javascript'
 
+" Clojure syntax & indentation
+Plug 'vim-scripts/VimClojure'
+
 " Async make. Linting mostly
 Plug 'benekastah/neomake'
 
