@@ -71,6 +71,9 @@ au BufRead,BufNewFile *.purs set filetype=haskell
 " Run neomake on every write
 autocmd! BufWritePost * Neomake
 
+" Use 'bundle exec' when running rubocop in neomake
+let g:neomake_ruby_rubocop_maker_exe = 'bundle exec rubocop'
+
 " Turn on solarized
 set background=dark
 colorscheme solarized
