@@ -61,6 +61,9 @@ let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
 " Show whitespace characters (tabs, trailing spaces)
 set list
 
+" Highlight purescript files as if they were Haskell files
+au BufRead,BufNewFile *.purs set filetype=haskell
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
