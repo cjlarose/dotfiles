@@ -75,3 +75,15 @@ git config --global core.excludesfile $PWD/.gitignore_global
 git config --global color.ui true
 git config --global core.editor nvim
 ```
+
+### Window Manager & Hotkey Daemon
+
+Install [khd][khd] and [kwm][kwm].
+
+```
+ln -s $PWD/.khdrc ~/.khdrc
+ln -s $PWD/.kwm ~/.kwm
+```
+
+[khd]: https://github.com/koekeishiya/khd
+[kwm]: https://github.com/koekeishiya/kwm
