@@ -76,7 +76,7 @@ git config --global color.ui true
 git config --global core.editor nvim
 ```
 
-### Window Manager & Hotkey Daemon
+## Window Manager & Hotkey Daemon
 
 Install [khd][khd] and [kwm][kwm].
 
