@@ -60,14 +60,6 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 brew install ag
 ```
 
-* Tmux
-
-```
-brew install tmux
-ln -s $PWD/.tmux.conf ~/.tmux.conf
-```
-
-
 ## Git setup
 
 ```
