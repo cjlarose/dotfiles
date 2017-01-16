@@ -32,26 +32,28 @@ Download and install [prezto][prezto].
 
 [prezto]: https://github.com/sorin-ionescu/prezto
 
-## Terminal & vim setup
+## Terminal emulator
 
 * [iTerm2][iterm]
 * Download [Solarized][solarized] files for iTerm2
-* Install [neovim][neovim-install] & copy config
 
 [iterm]: http://iterm2.com/
 [solarized]: http://ethanschoonover.com/solarized
-[neovim-install]: https://github.com/neovim/neovim/wiki/Installing-Neovim
+
+## Editor
+
+* Install Vim 8 from homebrew & copy config
+
 
 ```
-mkdir -p ~/.config/nvim
-ln -s $PWD/init.vim ~/.config/nvim/init.vim
+ln -s $PWD/.vimrc ~/.vimrc
 ```
 
 * Install vim-plug. Remember to run `:PlugInstall`
 
 ```
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 * Install `ag`. For use with `fzf`.

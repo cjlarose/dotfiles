@@ -49,9 +49,6 @@ set tabstop=2
 " Use 2 spaces for indentation
 set shiftwidth=2
 
-" Hide terminal buffers instead of closing them and terminating the process
-autocmd TermOpen * set bufhidden=hide
-
 " Disable escape key (use jj instead)
 inoremap <esc> <NOP>
 inoremap <C-\> <NOP>
