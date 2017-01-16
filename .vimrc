@@ -13,8 +13,8 @@ Plug 'vim-scripts/VimClojure'
 " Async make. Linting mostly
 Plug 'benekastah/neomake'
 
-" Solarized color scheme
-Plug 'altercation/vim-colors-solarized'
+" Color scheme
+Plug 'w0ng/vim-hybrid'
 
 " Fuzzy file finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -74,9 +74,10 @@ autocmd! BufWritePost * Neomake
 " Use 'bundle exec' when running rubocop in neomake
 let g:neomake_ruby_rubocop_maker_exe = 'bundle exec rubocop'
 
-" Turn on solarized
+" Turn on color scheme
+let g:hybrid_custom_term_colors = 1
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 
 " Key mappings for fzf plugin
 nmap <leader>t :FZF<CR>

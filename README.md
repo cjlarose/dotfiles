@@ -35,10 +35,10 @@ Download and install [prezto][prezto].
 ## Terminal emulator
 
 * [iTerm2][iterm]
-* Download [Solarized][solarized] files for iTerm2
+* Download [Hybrid][hybrid] files for iTerm2
 
 [iterm]: http://iterm2.com/
-[solarized]: http://ethanschoonover.com/solarized
+[hybrid]: https://github.com/w0ng/vim-hybrid
 
 ## Editor
 
