@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Chris LaRose
+	email = cjlarose@gmail.com
+[core]
+	excludesfile = /Users/cjlarose/dev/dotfiles/.gitignore_global
+	editor = vim
+[color]
+	ui = true

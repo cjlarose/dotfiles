@@ -65,9 +65,7 @@ brew install ag
 ## Git setup
 
 ```
-git config --global core.excludesfile $PWD/.gitignore_global
-git config --global color.ui true
-git config --global core.editor nvim
+ln -s $PWD/.gitconfig ~/.gitconfig
 ```
 
 ## Window Manager & Hotkey Daemon
