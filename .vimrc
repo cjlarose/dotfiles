@@ -49,6 +49,12 @@ set tabstop=2
 " Use 2 spaces for indentation
 set shiftwidth=2
 
+" Navigate to search results while typing
+set incsearch
+
+" Highlight search results
+set hlsearch
+
 " Disable escape key (use jj instead)
 inoremap <esc> <NOP>
 inoremap <C-\> <NOP>
