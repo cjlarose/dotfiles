@@ -4,7 +4,7 @@
 	name = Chris LaRose
 	email = cjlarose@gmail.com
 [core]
-	excludesfile = /Users/cjlarose/dev/dotfiles/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 [color]
 	ui = true

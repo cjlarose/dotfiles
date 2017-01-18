@@ -65,6 +65,8 @@ brew install ag
 ## Git setup
 
 ```
+brew install git
+ln -s $PWD/.gitignore_global ~/.gitignore_global
 ln -s $PWD/.gitconfig ~/.gitconfig
 ```
 
