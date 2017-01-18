@@ -17,7 +17,6 @@ Plug 'benekastah/neomake'
 Plug 'w0ng/vim-hybrid'
 
 " Fuzzy file finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Git integration
@@ -91,6 +90,9 @@ nmap <leader>bb :Buffers<CR>
 
 " Respect .gitignore in fzf
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
+" Set location of fzf binary for fzf.vim
+set rtp+=/usr/local/opt/fzf
 
 " Make ack.vim use ag instead
 if executable('ag')

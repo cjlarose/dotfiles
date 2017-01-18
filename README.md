@@ -40,12 +40,18 @@ Download and install [prezto][prezto].
 [iterm]: http://iterm2.com/
 [hybrid]: https://github.com/w0ng/vim-hybrid
 
+## File finder
+
+```
+brew install fzf
+```
+
 ## Editor
 
 * Install Vim 8 from homebrew & copy config
 
-
 ```
+brew install vim
 ln -s $PWD/.vimrc ~/.vimrc
 ```
 
