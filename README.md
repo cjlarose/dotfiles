@@ -2,12 +2,6 @@
 
 ## Basic development necessities
 
-* Install Xcode command-line utilities
-
-```
-xcode-select --install
-```
-
 * [Homebrew][brew]
 
 [brew]: http://brew.sh/
@@ -20,11 +14,9 @@ xcode-select --install
 
 ## Password Management
 
-* [Dropbox][dropbox] (to sync 1password)
 * [1password][1password] 
 
-[dropbox]: https://www.dropbox.com/
-[1password]: https://itunes.apple.com/us/app/1password-password-manager/id443987910?mt=12
+[1password]: https://1password.com/downloads/
 
 ## Shell setup
 
