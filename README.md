@@ -20,9 +20,9 @@
 
 ## Shell setup
 
-Download and install [prezto][prezto].
-
-[prezto]: https://github.com/sorin-ionescu/prezto
+```
+brew install bash-completion
+```
 
 ## Terminal emulator
 
