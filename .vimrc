@@ -22,9 +22,6 @@ Plug 'junegunn/fzf.vim'
 " Git integration
 Plug 'tpope/vim-fugitive'
 
-" Ack/Ag integration
-Plug 'mileszs/ack.vim'
-
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -90,27 +87,15 @@ nmap <leader>t :FZF<CR>
 nmap <leader>bb :Buffers<CR>
 
 " Respect .gitignore in fzf
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 
 " Set location of fzf binary for fzf.vim
 set rtp+=/usr/local/opt/fzf
 
-" Make ack.vim use ag instead
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
 
-" Shortcut for Ack!
-nmap <leader>f :Ack!<space>
+" Defines Find, which uses ripgreg through fzf
+" https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2#.5ai5ij9it
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
-" Modify ack.vim mappings
-let g:ack_mappings = {
-  \ "t": "<C-W><CR><C-W>T",
-  \ "T": "<C-W><CR><C-W>TgT<C-W>j",
-  \ "o": "<CR>",
-  \ "O": "<CR><C-W><C-W>:ccl<CR>",
-  \ "go": "<CR><C-W>j",
-  \ "<C-X>": "<C-W><CR><C-W>K",
-  \ "H": "<C-W><CR><C-W>K<C-W>b",
-  \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t",
-  \ "gv": "<C-W><CR><C-W>H<C-W>b<C-W>J" }
+" Shortcut for Find
+nmap <leader>f :Find<space>
