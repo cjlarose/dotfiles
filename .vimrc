@@ -17,6 +17,7 @@ Plug 'benekastah/neomake'
 Plug 'w0ng/vim-hybrid'
 
 " Fuzzy file finder
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Git integration
@@ -90,7 +91,7 @@ nmap <leader>bb :Buffers<CR>
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 
 " Set location of fzf binary for fzf.vim
-set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/bin/fzf
 
 
 " Defines Find, which uses ripgreg through fzf
