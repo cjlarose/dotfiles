@@ -40,8 +40,3 @@ Thumbs.db
 #######
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
-
-# Ag #
-######
-
-.agignore
