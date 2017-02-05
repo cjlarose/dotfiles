@@ -45,3 +45,6 @@ export PATH=./node_modules/.bin:$PATH
 # Aliases
 alias ls="ls --color"
 alias ll="ls -al"
+alias be="bundle exec"
+alias rtest="be ruby -Itest"
+alias nginx-restart="sudo /opt/nginx/sbin/nginx -s stop && sudo /opt/nginx/sbin/nginx"
