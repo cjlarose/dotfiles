@@ -29,6 +29,7 @@ bindkey '^x^e' edit-command-line
 # Program preferences
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/vim
+PAGER=/usr/bin/less
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
