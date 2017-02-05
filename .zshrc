@@ -38,6 +38,9 @@ eval "$(rbenv init -)"
 export NVM_DIR="/home/cjlarose/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# manually installed firefox
+export PATH=/opt/firefox/bin:$PATH
+
 # Add node_modules to PATH
 export PATH=./node_modules/.bin:$PATH
 
