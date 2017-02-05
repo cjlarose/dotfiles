@@ -53,6 +53,12 @@ export PATH=./node_modules/.bin:$PATH
 . /usr/share/fzf/completion.zsh
 . /usr/share/fzf/key-bindings.zsh
 
+# send rg through pager
+function rg()
+{
+  /usr/bin/rg -p "$@" | less -R
+}
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -al"
