@@ -38,6 +38,10 @@ export PATH=./node_modules/.bin:$PATH
 # http://unix.stackexchange.com/a/93477
 . /etc/profile.d/vte.sh
 
+# fzf
+. /usr/share/fzf/completion.zsh
+. /usr/share/fzf/key-bindings.zsh
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -al"
