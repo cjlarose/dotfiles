@@ -21,6 +21,11 @@ setopt PROMPT_SUBST
 PROMPT="%~ 〉"
 RPROMPT=$'$(__git_ps1 "%s")'
 
+# Allow command line editing in an external editor.
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
 # Program preferences
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/vim
