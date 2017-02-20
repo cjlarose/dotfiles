@@ -45,6 +45,9 @@ export PATH=/opt/firefox/bin:$PATH
 # Add node_modules to PATH
 export PATH=./node_modules/.bin:$PATH
 
+# Add nginx to PATH
+export PATH=/opt/nginx/sbin:$PATH
+
 # Open pwd in new terminals
 # http://unix.stackexchange.com/a/93477
 . /etc/profile.d/vte.sh
