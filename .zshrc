@@ -39,14 +39,8 @@ eval "$(rbenv init -)"
 export NVM_DIR="/home/cjlarose/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# manually installed firefox
-export PATH=/opt/firefox/bin:$PATH
-
 # Add node_modules to PATH
 export PATH=./node_modules/.bin:$PATH
-
-# Add nginx to PATH
-export PATH=/opt/nginx/sbin:$PATH
 
 # Open pwd in new terminals
 # http://unix.stackexchange.com/a/93477
@@ -70,3 +64,6 @@ alias rtest="be ruby -Itest"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias docker='sudo docker'
+
+# Run local setup
+. ~/.zshrc-local
