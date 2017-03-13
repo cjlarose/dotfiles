@@ -51,7 +51,7 @@ export PATH=./node_modules/.bin:$PATH
 . /usr/share/fzf/key-bindings.zsh
 
 # send rg through pager
-function rg()
+function rgp()
 {
   /usr/bin/rg -p "$@" | less -R
 }
