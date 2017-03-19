@@ -54,14 +54,7 @@ function rgp()
   /usr/bin/rg -p "$@" | less -R
 }
 
-# Aliases
-alias ls="ls --color"
-alias ll="ls -al"
-alias be="bundle exec"
-alias rtest="be ruby -Itest"
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-alias docker='sudo docker'
+. ~/.zshrc-aliases
 
 # Run local setup
 if [ -f "$HOME/.zshrc-local" ]; then

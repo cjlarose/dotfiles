@@ -55,6 +55,7 @@ Run `:PlugInstall`
 ```
 sudo pacman -S zsh zsh-completions
 cp /usr/share/git/completion/git-prompt.sh ~/.git-prompt.sh
+ln -s $PWD/.zshrc-aliases ~/.zshrc-aliases
 ln -s $PWD/.zshrc ~/.zshrc
 chsh -s /usr/bin/zsh
 ```
