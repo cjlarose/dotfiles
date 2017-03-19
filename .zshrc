@@ -32,8 +32,10 @@ EDITOR=/usr/bin/vim
 PAGER=/usr/bin/less
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 # nvm
 export NVM_DIR="/home/cjlarose/.nvm"
@@ -66,4 +68,6 @@ alias pbpaste='xsel --clipboard --output'
 alias docker='sudo docker'
 
 # Run local setup
-. ~/.zshrc-local
+if [ -f "$HOME/.zshrc-local" ]; then
+  . ~/.zshrc-local
+fi
