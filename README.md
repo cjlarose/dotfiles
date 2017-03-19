@@ -50,6 +50,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 Run `:PlugInstall`
 
+## Window manager
+
+```
+mkdir -p ~/.config/i3
+ln -s $PWD/i3.conf ~/.config/i3/config
+sudo pacman -S i3
+```
+
 ## Shell
 
 ```
