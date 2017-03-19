@@ -44,10 +44,6 @@ export NVM_DIR="/home/cjlarose/.nvm"
 # Add node_modules to PATH
 export PATH=./node_modules/.bin:$PATH
 
-# Open pwd in new terminals
-# http://unix.stackexchange.com/a/93477
-. /etc/profile.d/vte.sh
-
 # fzf
 . /usr/share/fzf/completion.zsh
 . /usr/share/fzf/key-bindings.zsh
