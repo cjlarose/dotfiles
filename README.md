@@ -14,8 +14,6 @@ sudo pacman -S fzf
 
 ## Search
 
-* Install `ripgrep`. For use with `fzf`.
-
 ```
 sudo pacman -S ripgrep
 ```
