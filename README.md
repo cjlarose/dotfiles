@@ -49,3 +49,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 
 Run `:PlugInstall`
+
+## Shell
+
+```
+sudo pacman -S zsh zsh-completions
+cp /usr/share/git/completion/git-prompt.sh ~/.git-prompt.sh
+ln -s $PWD/.zshrc ~/.zshrc
+chsh -s /usr/bin/zsh
+```

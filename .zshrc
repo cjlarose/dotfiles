@@ -17,7 +17,7 @@ compinit
 autoload -Uz promptinit
 promptinit
 setopt PROMPT_SUBST
-. ~/git-prompt.sh
+. ~/.git-prompt.sh
 PROMPT="%~ 〉"
 RPROMPT=$'$(__git_ps1 "%s")'
 
