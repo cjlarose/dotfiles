@@ -18,6 +18,12 @@ sudo pacman -S fzf
 sudo pacman -S ripgrep
 ```
 
+## Clipboard management
+
+```
+sudo pacman -S xsel
+```
+
 ## Git setup
 
 ```
