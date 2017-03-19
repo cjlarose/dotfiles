@@ -65,3 +65,9 @@ chsh -s /usr/bin/zsh
 sudo pacman -S rxvt-unicode
 ln -s $PWD/.Xdefaults ~/.Xdefaults
 ```
+
+## Fonts
+
+```
+sudo pacman -S ttf-dejavu ttf-symbola
+```
