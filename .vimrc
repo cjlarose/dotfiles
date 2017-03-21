@@ -98,7 +98,7 @@ set rtp+=/usr/bin/fzf
 
 " Ack.vim config
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep --no-heading'
+  let g:ackprg = 'rg --vimgrep'
 endif
 
 nmap <leader>f :Ack!<space>
