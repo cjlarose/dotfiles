@@ -44,10 +44,6 @@ export NVM_DIR="/home/cjlarose/.nvm"
 # Add node_modules to PATH
 export PATH=./node_modules/.bin:$PATH
 
-# Open pwd in new terminals
-# http://unix.stackexchange.com/a/93477
-. /etc/profile.d/vte.sh
-
 # fzf
 . /usr/share/fzf/completion.zsh
 . /usr/share/fzf/key-bindings.zsh
@@ -58,14 +54,7 @@ function rgp()
   /usr/bin/rg -p "$@" | less -R
 }
 
-# Aliases
-alias ls="ls --color"
-alias ll="ls -al"
-alias be="bundle exec"
-alias rtest="be ruby -Itest"
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-alias docker='sudo docker'
+. ~/.zshrc-aliases
 
 # Run local setup
 if [ -f "$HOME/.zshrc-local" ]; then

@@ -50,11 +50,34 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 Run `:PlugInstall`
 
+## Window manager
+
+```
+mkdir -p ~/.config/i3
+ln -s $PWD/i3.conf ~/.config/i3/config
+sudo pacman -S i3
+```
+
 ## Shell
 
 ```
 sudo pacman -S zsh zsh-completions
 cp /usr/share/git/completion/git-prompt.sh ~/.git-prompt.sh
+ln -s $PWD/.zshrc-aliases ~/.zshrc-aliases
 ln -s $PWD/.zshrc ~/.zshrc
 chsh -s /usr/bin/zsh
+```
+
+## Terminal Emulator
+
+```
+sudo pacman -S rxvt-unicode
+ln -s $PWD/.Xdefaults ~/.Xdefaults
+```
+
+## Fonts
+
+```
+sudo pacman -S ttf-dejavu ttf-symbola noto-fonts
+yaourt -S ttf-ms-fonts ttf-vista-fonts
 ```
