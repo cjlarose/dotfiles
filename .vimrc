@@ -26,6 +26,9 @@ Plug 'tpope/vim-fugitive'
 " Search through file conents
 Plug 'mileszs/ack.vim'
 
+" Enable bracketed paste mode handling
+Plug 'ConradIrwin/vim-bracketed-paste'
+
 " Add plugins to &runtimepath
 call plug#end()
 
