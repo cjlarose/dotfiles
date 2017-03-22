@@ -55,10 +55,7 @@ set incsearch
 " Highlight search results
 set hlsearch
 
-" Disable escape key (use jj instead)
-inoremap <esc> <NOP>
-inoremap <C-\> <NOP>
-inoremap <C-c> <NOP>
+" Map jj in insert mode to esc
 inoremap jj <Esc>
 
 " Replace hash rockets with Ruby 1.9-style hashes
