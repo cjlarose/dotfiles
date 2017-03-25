@@ -18,7 +18,7 @@ autoload -Uz promptinit
 promptinit
 setopt PROMPT_SUBST
 . ~/.git-prompt.sh
-PROMPT="%~ 〉"
+PROMPT="%~ $ "
 RPROMPT=$'$(__git_ps1 "%s")'
 
 # Allow command line editing in an external editor.
