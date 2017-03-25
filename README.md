@@ -79,5 +79,4 @@ ln -s $PWD/.Xdefaults ~/.Xdefaults
 
 ```
 sudo pacman -S ttf-dejavu ttf-symbola noto-fonts
-yaourt -S ttf-ms-fonts ttf-vista-fonts
 ```
