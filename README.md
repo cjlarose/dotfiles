@@ -79,5 +79,6 @@ ln -s $PWD/.Xdefaults ~/.Xdefaults
 
 ```
 sudo pacman -S ttf-dejavu ttf-symbola noto-fonts ttf-croscore noto-fonts-emoji
-
+mkdir -p ~/.config/fontconfig
+ln -s $PWD/fonts.conf ~/.config/fontconfig
 ```
