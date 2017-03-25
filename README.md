@@ -78,5 +78,6 @@ ln -s $PWD/.Xdefaults ~/.Xdefaults
 ## Fonts
 
 ```
-sudo pacman -S ttf-dejavu ttf-symbola noto-fonts ttf-croscore
+sudo pacman -S ttf-dejavu ttf-symbola noto-fonts ttf-croscore noto-fonts-emoji
+
 ```
