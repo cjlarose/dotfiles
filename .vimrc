@@ -101,4 +101,10 @@ if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
 
+" Shortcut for Ack
 nmap <leader>f :Ack!<space>
+
+" Modify ack.vim mappings
+let g:ack_mappings = {
+  \ "<C-X>": "<C-W><CR><C-W>K",
+  \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t" }
