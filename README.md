@@ -18,6 +18,12 @@ sudo pacman -S fzf
 sudo pacman -S ripgrep
 ```
 
+## Directory switching
+
+```
+sudo pacman -S fasd
+```
+
 ## Clipboard management
 
 ```

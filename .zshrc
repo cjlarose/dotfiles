@@ -48,6 +48,9 @@ export PATH=./node_modules/.bin:$PATH
 . /usr/share/fzf/completion.zsh
 . /usr/share/fzf/key-bindings.zsh
 
+# fasd
+eval "$(fasd --init auto)"
+
 # send rg through pager
 function rgp()
 {
