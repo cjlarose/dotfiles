@@ -27,9 +27,9 @@ zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
 # Program preferences
-BROWSER=/usr/bin/chromium
-EDITOR=/usr/bin/vim
-PAGER=/usr/bin/less
+export BROWSER=/usr/bin/chromium
+export EDITOR=/usr/bin/vim
+export PAGER=/usr/bin/less
 
 # rbenv
 if [ -d "$HOME/.rbenv" ]; then
