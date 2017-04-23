@@ -101,8 +101,9 @@ if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
 
-" Shortcut for Ack
+" Shortcuts for Ack
 nmap <leader>f :Ack!<space>
+nmap <leader>w :Ack!<space><cword><CR>
 
 " Modify ack.vim mappings
 let g:ack_mappings = {
