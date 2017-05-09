@@ -59,7 +59,7 @@ set incsearch
 set hlsearch
 
 " Map jj in insert mode to esc
-inoremap jj <Esc>
+inoremap fd <Esc>
 
 " Replace hash rockets with Ruby 1.9-style hashes
 let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
