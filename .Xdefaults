@@ -1,4 +1,4 @@
-URxvt.font: xft:Hack:size=10
+URxvt.font: xft:Hack:size=10,xft:DejaVu Sans Mono:size=10
 
 ! Colors from hybrid color scheme
 URxvt.background: #232C31
