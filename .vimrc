@@ -58,7 +58,7 @@ set incsearch
 " Highlight search results
 set hlsearch
 
-" Map jj in insert mode to esc
+" Map fd in insert mode to esc
 inoremap fd <Esc>
 
 " Replace hash rockets with Ruby 1.9-style hashes
