@@ -26,6 +26,9 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
+# Bulk rename
+autoload -U zmv
+
 # Program preferences
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/vim
