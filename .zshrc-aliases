@@ -4,5 +4,6 @@ alias be="bundle exec"
 alias rtest="be ruby -Itest"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+alias open='xdg-open'
 alias docker='sudo docker'
 alias docker-compose='sudo docker-compose'
