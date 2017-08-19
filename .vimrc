@@ -1,14 +1,11 @@
 " Start loading plugins
 call plug#begin('~/.config/nvim/plugged')
 
-" General Ruby shit
+" Programming language support
 Plug 'vim-ruby/vim-ruby'
-
-" JavaScript syntax & indentation
 Plug 'pangloss/vim-javascript'
-
-" Clojure syntax & indentation
 Plug 'vim-scripts/VimClojure'
+Plug 'neovimhaskell/haskell-vim'
 
 " Async make. Linting mostly
 Plug 'benekastah/neomake'
