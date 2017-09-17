@@ -81,6 +81,12 @@ sudo pacman -S rxvt-unicode
 ln -s $PWD/.Xdefaults ~/.Xdefaults
 ```
 
+## Terminal multiplexer
+
+```
+ln -s $PWD/.tmux.conf ~/.tmux.conf
+```
+
 ## Fonts
 
 ```
