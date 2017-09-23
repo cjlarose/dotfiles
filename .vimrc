@@ -7,6 +7,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/VimClojure'
 Plug 'neovimhaskell/haskell-vim'
 
+" Elm support
+Plug 'ElmCast/elm-vim'
+
 " Async make. Linting mostly
 Plug 'benekastah/neomake'
 
