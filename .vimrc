@@ -29,9 +29,6 @@ Plug 'mileszs/ack.vim'
 " Enable bracketed paste mode handling
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" Haskell formatting
-Plug 'alx741/vim-hindent'
-
 " Add plugins to &runtimepath
 call plug#end()
 
