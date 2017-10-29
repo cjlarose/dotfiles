@@ -48,8 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=./node_modules/.bin:$PATH
 
 # fzf
-. /usr/share/fzf/completion.zsh
-. /usr/share/fzf/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fasd
 eval "$(fasd --init auto)"

@@ -10,6 +10,7 @@
 
 ```
 sudo pacman -S fzf
+ln -s $PWD/.fzf.zsh ~/.fzf.zsh
 ```
 
 ## Search
