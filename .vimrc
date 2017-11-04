@@ -30,6 +30,9 @@ Plug 'mileszs/ack.vim'
 " Enable bracketed paste mode handling
 Plug 'ConradIrwin/vim-bracketed-paste'
 
+" Commenting
+Plug 'tpope/vim-commentary'
+
 " Add plugins to &runtimepath
 call plug#end()
 
