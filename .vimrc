@@ -20,8 +20,9 @@ Plug 'w0ng/vim-hybrid'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-" Git integration
+" Git(hub) integration
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Search through file conents
 Plug 'mileszs/ack.vim'
