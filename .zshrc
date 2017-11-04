@@ -56,7 +56,7 @@ eval "$(fasd --init auto)"
 # send rg through pager
 function rgp()
 {
-  /usr/bin/rg -p "$@" | less -R
+  rg -p "$@" | less -R
 }
 
 . ~/.zshrc-aliases
