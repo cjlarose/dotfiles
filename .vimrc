@@ -37,6 +37,9 @@ Plug 'tpope/vim-commentary'
 " Add plugins to &runtimepath
 call plug#end()
 
+" Set reasonable backspace behavior
+set backspace=indent,eol,start
+
 " Map leader key to ,
 let mapleader = ","
 
