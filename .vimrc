@@ -6,6 +6,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/VimClojure'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'leafgarland/typescript-vim'
 
 " Elm support
 Plug 'ElmCast/elm-vim'
