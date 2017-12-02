@@ -25,6 +25,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
+" Shortcuts for pairs of commands
+Plug 'tpope/vim-unimpaired'
+
 " Search through file conents
 Plug 'mileszs/ack.vim'
 
