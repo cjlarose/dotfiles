@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+DEBUG = false
+start_line_index, end_line_index, filename = ARGV
+
+start_line = start_line_index.to_i - 1
+end_line = end_line_index.to_i - 1
+
+source_lines = STDIN.readlines
+
+lines_before = source_lines[0...start_line]
+lines_after = source_lines[(end_line + 1)..-1]
+
+start_comment = '# BEGIN AUTO CORRECT'
+end_comment = '# END AUTO CORRECT'
+
+unless start_line.zero?
+  # Add comment to end of line before start line
+  prev_line = start_line - 1
+  line = source_lines[prev_line]
+  source_lines[prev_line] = line.sub(/\n$/, "#{start_comment}\n")
+end
+
+# Add comment to end of last line
+line = source_lines[end_line]
+source_lines[end_line] = line.sub(/\n$/, "#{end_comment}\n")
+
+if DEBUG
+  puts 'lines_before'
+  puts lines_before.join
+  puts '=' * 30
+
+  puts 'lines_after'
+  puts lines_after.join
+  puts '=' * 30
+
+  puts 'annotated source'
+  puts source_lines.join
+  puts '=' * 30
+end
+
+cmd = "rubocop --auto-correct -o /dev/null -s #{filename}"
+output_lines = nil
+IO.popen(cmd, 'a+') do |f|
+  f.puts source_lines.join
+  f.close_write
+  output_lines = f.readlines
+end
+output_lines.shift # remove first line of output
+
+if DEBUG
+  puts 'output'
+  puts output_lines.join
+  puts '=' * 30
+end
+
+begin_output = 0
+if start_line != 0
+  terminator = "#{start_comment}\n"
+  line_with_comment = output_lines.index { |l| l.end_with? terminator }
+  begin_output = line_with_comment + 1
+end
+
+end_terminator = "#{end_comment}\n"
+line_with_end_comment = output_lines.index { |l| l.end_with? end_terminator }
+end_output = line_with_end_comment
+
+formatted_slice = output_lines[begin_output..end_output]
+formatted_slice[-1] = formatted_slice[-1].sub(/ *#{end_comment}/, '')
+
+if DEBUG
+  puts 'formatted_slice'
+  puts formatted_slice.join
+  puts '=' * 30
+end
+
+print lines_before.join
+print formatted_slice.join
+print lines_after.join

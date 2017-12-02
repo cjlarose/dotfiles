@@ -37,6 +37,9 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 " Commenting
 Plug 'tpope/vim-commentary'
 
+" Auto-formatting
+Plug 'Chiel92/vim-autoformat'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -134,3 +137,7 @@ let g:haskell_indent_after_bare_where = 2
 let g:haskell_indent_do = 3
 let g:haskell_indent_in = 1
 let g:haskell_indent_guard = 2
+
+" autoformat settings
+noremap <leader>a :Autoformat<CR>
+let g:formatdef_rubocop = "'~/.bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
