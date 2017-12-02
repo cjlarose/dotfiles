@@ -1,6 +1,6 @@
 alias ll="ls -al"
 alias be="bundle exec"
-alias rtest="be ruby -Itest"
+alias rtest="SEED=1337 be ruby -Itest"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias open='xdg-open'
