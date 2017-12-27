@@ -35,6 +35,12 @@
  )
 
 
+; Emacs chrome config
+(tool-bar-mode -1)
+(toggle-scroll-bar -1)
+(setq visible-bell 1)
+
+
 ; Color theme
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow-night)
