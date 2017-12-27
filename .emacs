@@ -44,3 +44,8 @@
 ; Color theme
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow-night)
+
+
+; Evil (vim bindings)
+(require 'evil)
+(evil-mode 1)
