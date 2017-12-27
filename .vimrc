@@ -128,16 +128,10 @@ let g:ack_mappings = {
   \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t" }
 
 " Disable indenting for haskell
-let g:haskell_indent_if = 2
-let g:haskell_indent_case = 2
-let g:haskell_indent_let = 4
-let g:haskell_indent_where = 6
-let g:haskell_indent_before_where = 2
-let g:haskell_indent_after_bare_where = 2
-let g:haskell_indent_do = 3
-let g:haskell_indent_in = 1
-let g:haskell_indent_guard = 2
+let g:haskell_indent_disable = 1
 
 " autoformat settings
 noremap <leader>a :Autoformat<CR>
 let g:formatdef_rubocop = "'~/.bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
+let g:formatdef_brittany = '"brittany"'
+let g:formatters_haskell = ['brittany']
