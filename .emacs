@@ -26,7 +26,12 @@
  '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
-    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default))))
+    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(haskell-interactive-popup-errors nil)
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log nil)
+ '(haskell-process-suggest-remove-import-lines t)
+ '(haskell-process-type (quote stack-ghci)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,6 +48,7 @@
 
 ; PATH
 (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
+(setq exec-path (append exec-path '("/usr/local/bin")))
 
 
 ; Color theme
@@ -87,3 +93,17 @@
   '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
 
 (setq haskell-compile-cabal-build-command "stack build")
+
+;; Haskell REPL
+(require 'haskell-interactive-mode)
+(require 'haskell-process)
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+
+(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
+(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
+(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+
+(define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
+(define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
