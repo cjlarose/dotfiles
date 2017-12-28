@@ -41,6 +41,10 @@
 (setq visible-bell 1)
 
 
+; PATH
+(setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
+
+
 ; Color theme
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow-night)
@@ -74,3 +78,12 @@
 ; Haskell-mode
 (require 'haskell-mode-autoloads)
 (add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
+
+;; Haskell compilation
+(eval-after-load "haskell-mode"
+  '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
+
+(eval-after-load "haskell-cabal"
+  '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
+
+(setq haskell-compile-cabal-build-command "stack build")
