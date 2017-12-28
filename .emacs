@@ -49,3 +49,8 @@
 ; Evil (vim bindings)
 (require 'evil)
 (evil-mode 1)
+
+
+; Projectile (project management)
+(require 'projectile)
+(projectile-mode) ; Automatically discover projects
