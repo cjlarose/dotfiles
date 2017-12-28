@@ -51,6 +51,11 @@
 (evil-mode 1)
 
 
+; Evil-escape (escape with "fd")
+(require 'evil-escape)
+(evil-escape-mode)
+
+
 ; Projectile (project management)
 (require 'projectile)
 (projectile-mode) ; Automatically discover projects
