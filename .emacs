@@ -47,8 +47,14 @@
 
 
 ; PATH
-(setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
+(setenv "PATH"
+  (concat "/usr/local/bin" ":"
+          "~/.stack/programs/x86_64-osx/ghc-8.0.2/bin" ":"
+          "~/.local/bin" ":"
+          (getenv "PATH")))
 (setq exec-path (append exec-path '("/usr/local/bin")))
+(setq exec-path (append exec-path '("~/.stack/programs/x86_64-osx/ghc-8.0.2/bin")))
+(setq exec-path (append exec-path '("~/.local/bin")))
 
 
 ; Color theme
@@ -107,3 +113,11 @@
 
 (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
 (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+
+
+; ghc-mod (Haskell compiler info)
+(add-to-list 'load-path "~/.emacs.d/lib/ghc-mod/elisp")
+(setq ghc-debug t) ; enable debug logging
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
