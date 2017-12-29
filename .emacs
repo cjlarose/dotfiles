@@ -73,6 +73,12 @@
 (evil-escape-mode)
 
 
+; Relative line numbers
+(require 'linum-relative)
+(linum-relative-global-mode)
+(setq linum-relative-current-symbol "")
+
+
 ; Projectile (project management)
 (require 'projectile)
 (projectile-mode) ; Automatically discover projects
