@@ -26,12 +26,7 @@
  '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
-    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
- '(haskell-interactive-popup-errors nil)
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log nil)
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-type (quote stack-ghci)))
+    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -47,14 +42,8 @@
 
 
 ; PATH
-(setenv "PATH"
-  (concat "/usr/local/bin" ":"
-          "~/.stack/programs/x86_64-osx/ghc-8.0.2/bin" ":"
-          "~/.local/bin" ":"
-          (getenv "PATH")))
+(setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
 (setq exec-path (append exec-path '("/usr/local/bin")))
-(setq exec-path (append exec-path '("~/.stack/programs/x86_64-osx/ghc-8.0.2/bin")))
-(setq exec-path (append exec-path '("~/.local/bin")))
 
 
 ; Color theme
