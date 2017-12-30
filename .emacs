@@ -81,3 +81,9 @@
 ;; disable ido faces to see flx highlights.
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
+
+
+; Intero
+(add-to-list 'load-path "~/.emacs.d/lib/intero/elisp")
+(require 'intero)
+(intero-global-mode 1)
