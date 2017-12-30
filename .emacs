@@ -92,39 +92,3 @@
 ;; disable ido faces to see flx highlights.
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
-
-
-; Haskell-mode
-(require 'haskell-mode-autoloads)
-(add-to-list 'Info-default-directory-list "~/.emacs.d/lib/haskell-mode/")
-
-;; Haskell compilation
-(eval-after-load "haskell-mode"
-  '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
-
-(eval-after-load "haskell-cabal"
-  '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
-
-(setq haskell-compile-cabal-build-command "stack build")
-
-;; Haskell REPL
-(require 'haskell-interactive-mode)
-(require 'haskell-process)
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-
-(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
-(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
-(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
-(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-
-(define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-
-
-; ghc-mod (Haskell compiler info)
-(add-to-list 'load-path "~/.emacs.d/lib/ghc-mod/elisp")
-(setq ghc-debug t) ; enable debug logging
-(autoload 'ghc-init "ghc" nil t)
-(autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
