@@ -42,8 +42,9 @@
 
 
 ; PATH
-(setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
-(setq exec-path (append exec-path '("/usr/local/bin")))
+(require 'exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 
 ; Color theme
