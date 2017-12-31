@@ -91,6 +91,11 @@
 
 
 ; Intero
+(require 'pkg-info) ; for flycheck debugging support
 (add-to-list 'load-path "~/.emacs.d/lib/intero/elisp")
 (require 'intero)
 (intero-global-mode 1)
+; enable inlint hlint errors (https://github.com/commercialhaskell/intero/issues/126)
+(with-eval-after-load 'intero
+  (with-eval-after-load 'flycheck
+    (flycheck-add-next-checker 'intero '(warning . haskell-hlint))))
