@@ -84,6 +84,11 @@
 (setq ido-use-faces nil)
 
 
+; Flycheck
+(require 'flycheck)
+(global-flycheck-mode)
+
+
 ; Haskell-mode
 (require 'haskell-mode-autoloads)
 (add-to-list 'Info-default-directory-list "~/lib/emacs/haskell-mode/")
