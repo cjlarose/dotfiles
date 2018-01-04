@@ -27,6 +27,7 @@
  '(custom-safe-themes
    (quote
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(lua-indent-level 2)
  '(projectile-use-git-grep t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
