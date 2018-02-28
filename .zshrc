@@ -56,7 +56,7 @@ eval "$(fasd --init auto)"
 # send rg through pager
 function rgp()
 {
-  rg -p "$@" | less -R
+  rg --pretty "$@" | less --quit-if-one-screen --RAW-CONTROL-CHARS --no-init
 }
 
 # https://routley.io/tech/2017/11/23/logbook.html
