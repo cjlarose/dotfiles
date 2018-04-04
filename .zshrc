@@ -33,6 +33,7 @@ autoload -U zmv
 export BROWSER=/usr/bin/chromium
 export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
+export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
 
 # rbenv
 if [ -d "$HOME/.rbenv" ]; then
@@ -56,7 +57,7 @@ eval "$(fasd --init auto)"
 # send rg through pager
 function rgp()
 {
-  rg --pretty "$@" | less --quit-if-one-screen --RAW-CONTROL-CHARS --no-init
+  rg --pretty "$@" | less
 }
 
 # https://routley.io/tech/2017/11/23/logbook.html
