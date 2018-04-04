@@ -7,6 +7,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/VimClojure'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'vim-scripts/groovy.vim'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " Elm support
 Plug 'ElmCast/elm-vim'
