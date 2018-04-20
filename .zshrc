@@ -42,7 +42,7 @@ if [ -d "$HOME/.rbenv" ]; then
 fi
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
+[ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Add node_modules to PATH
