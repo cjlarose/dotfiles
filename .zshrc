@@ -66,6 +66,11 @@ function lb()
   vim ~/logbook/$(date '+%Y-%m-%d').md
 }
 
+# Add kubectl completion
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+
 . ~/.zshrc-aliases
 
 # Run local setup
