@@ -38,7 +38,7 @@ if DEBUG
   puts '=' * 30
 end
 
-cmd = "rubocop --auto-correct -o /dev/null -s #{filename}"
+cmd = "rubocop --auto-correct -o /dev/null -s #{filename} 2> /dev/null"
 output_lines = nil
 IO.popen(cmd, 'a+') do |f|
   f.puts source_lines.join
