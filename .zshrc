@@ -63,7 +63,12 @@ function rgp()
 # https://routley.io/tech/2017/11/23/logbook.html
 function lb()
 {
-  vim ~/logbook/$(date '+%Y-%m-%d').md
+  if [[ $1 ]]; then
+    FILENAME=$1
+  else
+    FILENAME=$(date '+%Y-%m-%d')
+  fi
+  $EDITOR ~/logbook/${FILENAME}.md
 }
 
 # Add kubectl completion
