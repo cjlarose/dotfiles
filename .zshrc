@@ -85,11 +85,12 @@ function rgp()
 # https://routley.io/tech/2017/11/23/logbook.html
 function lb()
 {
-  if [[ $1 ]]; then
-    FILENAME=$1
-  else
-    FILENAME=$(date '+%Y-%m-%d')
+  if ! [[ $1 ]]; then
+    >&2 echo "Missing argument"
+    return 1
   fi
+  DATE=$(date '+%Y-%m-%d')
+  FILENAME=${DATE}-$1
   $EDITOR ~/logbook/${FILENAME}.md
 }
 
