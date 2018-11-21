@@ -1,5 +1,5 @@
 " Start loading plugins
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Programming language support
 Plug 'vim-ruby/vim-ruby'
