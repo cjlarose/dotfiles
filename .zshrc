@@ -99,6 +99,7 @@ if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
 
+# aliases
 . ~/.zshrc-aliases
 
 # Run local setup
