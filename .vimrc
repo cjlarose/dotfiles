@@ -99,6 +99,24 @@ autocmd! BufWritePost * Neomake
 " Use 'bundle exec' when running rubocop in neomake
 let g:neomake_ruby_rubocop_maker_exe = 'bundle exec rubocop'
 
+" Do not execute eslint from cwd
+function! neomake#makers#ft#javascript#eslint() abort
+    let maker = {
+        \ 'args': ['--format=compact'],
+        \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+        \   '%W%f: line %l\, col %c\, Warning - %m,%-G,%-G%*\d problems%#',
+        \ 'output_stream': 'stdout',
+        \ }
+
+    function! maker.supports_stdin(_jobinfo) abort
+        let self.args += ['--stdin', '--stdin-filename=%:p']
+        let self.tempfile_name = ''
+        return 1
+    endfunction
+
+    return maker
+endfunction
+
 " Turn on color scheme
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
