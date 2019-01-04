@@ -6,16 +6,3 @@ function ci()
 {
 open 'https://ci.appfolio.net/project.html?projectId=MyCaseGitHubRails3&branch_MyCaseGitHubRails3='$(__git_ps1 "%s")
 }
-
-function deprecompile() {
-  # brew install jq moreutils
-  filename=$(find . -name '.sprockets-manifest-*.json')
-  jq --exit-status ".assets | has(\"${1}\")" $filename &> /dev/null
-  if [ $? -eq 0 ]; then
-    command="map_values(del(.[\"${1}\"]))"
-    jq -M $command $filename | sponge $filename
-    puma-dev -stop
-  else
-    >&2 echo "Unknown asset: ${1}"
-  fi
-}
