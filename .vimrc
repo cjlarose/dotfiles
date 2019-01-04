@@ -1,6 +1,9 @@
 " Start loading plugins
 call plug#begin('~/.vim/plugged')
 
+" Sensible defaults
+Plug 'tpope/vim-sensible'
+
 " Programming language support
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
@@ -45,9 +48,6 @@ Plug 'Chiel92/vim-autoformat'
 " Add plugins to &runtimepath
 call plug#end()
 
-" Set reasonable backspace behavior
-set backspace=indent,eol,start
-
 " Map leader key to ,
 let mapleader = ","
 
@@ -67,9 +67,6 @@ set tabstop=2
 
 " Use 2 spaces for indentation
 set shiftwidth=2
-
-" Navigate to search results while typing
-set incsearch
 
 " Highlight search results
 set hlsearch
