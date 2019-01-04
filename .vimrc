@@ -20,7 +20,7 @@ Plug 'ElmCast/elm-vim'
 Plug 'benekastah/neomake'
 
 " Color scheme
-Plug 'w0ng/vim-hybrid'
+Plug 'cjlarose/vim-hybrid'
 
 " Fuzzy file finder
 Plug 'junegunn/fzf'
