@@ -143,3 +143,6 @@ let g:formatters_ruby = ['rubocop']
 let g:formatdef_rubocop = "'~/bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
 let g:formatters_haskell = ['brittany']
 let g:formatdef_brittany = '"brittany"'
+
+" Shortcut to launch terminal in current window in Terminal-normal mode
+noremap <leader>r :term ++curwin<CR><C-\><C-n>
