@@ -51,6 +51,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 Run `:PlugInstall`
 
+* Install neovim-remote
+
+```
+pip3 install neovim-remote
+```
+
 ## Shell
 
 ```
