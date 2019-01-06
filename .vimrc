@@ -36,9 +36,6 @@ Plug 'tpope/vim-unimpaired'
 " Search through file conents
 Plug 'mileszs/ack.vim'
 
-" Enable bracketed paste mode handling
-Plug 'ConradIrwin/vim-bracketed-paste'
-
 " Commenting
 Plug 'tpope/vim-commentary'
 
