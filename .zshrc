@@ -35,6 +35,9 @@ export EDITOR=vim
 export PAGER=/usr/bin/less
 export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
 
+# Add ~/bin to path
+export PATH="$HOME/bin:$PATH"
+
 # rbenv
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
