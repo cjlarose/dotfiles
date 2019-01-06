@@ -35,10 +35,10 @@ ln -s $PWD/.gitconfig ~/.gitconfig
 
 ## Editor
 
-* Install Vim 8 & copy config
+* Install Neovim & copy config
 
 ```
-brew install vim
+brew install neovim
 ln -s $PWD/.vimrc ~/.vimrc
 ```
 
