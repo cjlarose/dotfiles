@@ -9,32 +9,26 @@
 ## File finder
 
 ```
-sudo pacman -S fzf
-ln -s $PWD/.fzf.zsh ~/.fzf.zsh
+brew install fzf
+/usr/local/opt/fzf/install
 ```
 
 ## Search
 
 ```
-sudo pacman -S ripgrep
+brew install ripgrep
 ```
 
 ## Directory switching
 
 ```
-sudo pacman -S fasd
-```
-
-## Clipboard management
-
-```
-sudo pacman -S xsel
+brew install fasd
 ```
 
 ## Git setup
 
 ```
-sudo pacman -S git
+brew install git
 ln -s $PWD/.gitignore_global ~/.gitignore_global
 ln -s $PWD/.gitconfig ~/.gitconfig
 ```
@@ -44,7 +38,7 @@ ln -s $PWD/.gitconfig ~/.gitconfig
 * Install Vim 8 & copy config
 
 ```
-sudo pacman -S vim
+brew install vim
 ln -s $PWD/.vimrc ~/.vimrc
 ```
 
@@ -57,41 +51,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 Run `:PlugInstall`
 
-## Window manager
-
-```
-mkdir -p ~/.config/i3
-ln -s $PWD/i3.conf ~/.config/i3/config
-sudo pacman -S i3
-```
-
 ## Shell
 
 ```
-sudo pacman -S zsh zsh-completions
-cp /usr/share/git/completion/git-prompt.sh ~/.git-prompt.sh
+brew install zsh
+ln -s /usr/local/etc/bash_completion.d/git-prompt.sh ~/.git-prompt.sh
 ln -s $PWD/.zshrc-aliases ~/.zshrc-aliases
 ln -s $PWD/.zshrc ~/.zshrc
-chsh -s /usr/bin/zsh
-```
-
-## Terminal Emulator
-
-```
-sudo pacman -S rxvt-unicode
-ln -s $PWD/.Xdefaults ~/.Xdefaults
-```
-
-## Terminal multiplexer
-
-```
-ln -s $PWD/.tmux.conf ~/.tmux.conf
-```
-
-## Fonts
-
-```
-sudo pacman -S ttf-symbola ttf-croscore ttf-hack ttf-dejavu noto-fonts noto-fonts-emoji noto-fonts-cjk
-mkdir -p ~/.config/fontconfig
-ln -s $PWD/fonts.conf ~/.config/fontconfig
+chsh -s /usr/local/bin/zsh
 ```

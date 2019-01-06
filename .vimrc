@@ -115,7 +115,7 @@ nmap <leader>bb :Buffers<CR>
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 
 " Set location of fzf binary for fzf.vim
-set rtp+=/usr/bin/fzf
+set rtp+=/usr/local/opt/fzf/install
 
 " Ack.vim config
 if executable('rg')
