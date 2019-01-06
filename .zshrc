@@ -97,11 +97,6 @@ function lb()
   $EDITOR ~/logbook/${FILENAME}.md
 }
 
-# Add kubectl completion
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
-
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
