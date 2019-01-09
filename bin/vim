@@ -1,6 +1,2 @@
 #!/bin/sh
-if [ -z "$NVIM_LISTEN_ADDRESS" ]; then
-  exec nvim "$@"
-else
-  exec nvr "$@"
-fi
+exec nvim "$@"
