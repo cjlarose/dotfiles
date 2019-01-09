@@ -140,3 +140,13 @@ let g:formatters_ruby = ['rubocop']
 let g:formatdef_rubocop = "'~/bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
 let g:formatters_haskell = ['brittany']
 let g:formatdef_brittany = '"brittany"'
+
+" Custom convenience function for creating logbook entries
+" https://routley.io/tech/2017/11/23/logbook.html
+function! s:logbook(name)
+  let l:basename = strftime('%Y-%m-%d') . '-' . a:name . '.md'
+  let l:fname = fnamemodify("~/logbook/" . l:basename, ":p")
+  execute "e " . l:fname
+endfunction
+
+command! -nargs=1 Logbook :call s:logbook(<q-args>)
