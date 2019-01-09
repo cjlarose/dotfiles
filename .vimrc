@@ -150,3 +150,4 @@ function! s:logbook(name)
 endfunction
 
 command! -nargs=1 Logbook :call s:logbook(<q-args>)
+nmap <leader>l :Logbook<space>
