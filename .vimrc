@@ -48,10 +48,6 @@ call plug#end()
 " Map leader key to ,
 let mapleader = ","
 
-" Enable swapping background quickly
-" http://tilvim.com/2013/07/31/swapping-bg.html
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
-
 " Enable both relative number and number to turn on 'hybrid mode'
 set relativenumber
 set number
