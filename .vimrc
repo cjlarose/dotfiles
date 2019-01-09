@@ -139,11 +139,18 @@ let g:formatdef_brittany = '"brittany"'
 
 " Custom convenience function for creating logbook entries
 " https://routley.io/tech/2017/11/23/logbook.html
-function! s:logbook(name)
+function! s:logbook_new(name)
   let l:basename = strftime('%Y-%m-%d') . '-' . a:name . '.md'
   let l:fname = fnamemodify("~/logbook/" . l:basename, ":p")
   execute "e " . l:fname
 endfunction
 
-command! -nargs=1 Logbook :call s:logbook(<q-args>)
-nmap <leader>l :Logbook<space>
+command! -nargs=1 LogbookNew :call s:logbook_new(<q-args>)
+nmap <leader>ln :LogbookNew<space>
+
+function! s:logbook_list()
+  execute 'Files ' . fnamemodify("~/logbook/", ":p")
+endfunction
+
+command! -nargs=0 LogbookList :call s:logbook_list()
+nmap <leader>ll :LogbookList<CR>
