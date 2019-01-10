@@ -103,9 +103,12 @@ let g:hybrid_reduced_contrast = 1
 set background=dark
 colorscheme hybrid
 
+" set prefix for FZF functions
+let g:fzf_command_prefix = 'Fzf'
+
 " Key mappings for fzf plugin
 nmap <leader>t :FZF<CR>
-nmap <leader>bb :Buffers<CR>
+nmap <leader>bb :FzfBuffers<CR>
 
 " Respect .gitignore in fzf
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
@@ -146,7 +149,7 @@ command! -nargs=1 LogbookNew :call s:logbook_new(<q-args>)
 nmap <leader>ln :LogbookNew<space>
 
 function! s:logbook_list()
-  execute 'Files ' . fnamemodify("~/logbook/", ":p")
+  execute 'FzfFiles ' . fnamemodify("~/logbook/", ":p")
 endfunction
 
 command! -nargs=0 LogbookList :call s:logbook_list()
