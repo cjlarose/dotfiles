@@ -107,11 +107,8 @@ colorscheme hybrid
 let g:fzf_command_prefix = 'Fzf'
 
 " Key mappings for fzf plugin
-nmap <leader>t :FZF<CR>
+nmap <leader>t :FzfGFiles<CR>
 nmap <leader>bb :FzfBuffers<CR>
-
-" Respect .gitignore in fzf
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 
 " Ack.vim config
 if executable('rg')
