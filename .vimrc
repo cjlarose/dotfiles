@@ -23,7 +23,7 @@ Plug 'benekastah/neomake'
 Plug 'cjlarose/vim-hybrid'
 
 " Fuzzy file finder
-Plug 'junegunn/fzf'
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Git(hub) integration
@@ -109,9 +109,6 @@ nmap <leader>bb :Buffers<CR>
 
 " Respect .gitignore in fzf
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
-
-" Set location of fzf binary for fzf.vim
-set rtp+=/usr/local/opt/fzf/install
 
 " Ack.vim config
 if executable('rg')
