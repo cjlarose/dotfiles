@@ -33,9 +33,6 @@ Plug 'tpope/vim-rhubarb'
 " Shortcuts for pairs of commands
 Plug 'tpope/vim-unimpaired'
 
-" Search through file conents
-Plug 'mileszs/ack.vim'
-
 " Commenting
 Plug 'tpope/vim-commentary'
 
@@ -110,19 +107,16 @@ let g:fzf_command_prefix = 'Fzf'
 nmap <leader>t :FzfGFiles<CR>
 nmap <leader>bb :FzfBuffers<CR>
 
-" Ack.vim config
-if executable('rg')
-  let g:ackprg = 'rg --sort-files --vimgrep'
-endif
+" Search the project for a specified string
+nmap <leader>f :FzfRg<space>
 
-" Shortcuts for Ack
-nmap <leader>f :Ack!<space>
-nmap <leader>w :Ack!<space><cword><CR>
-
-" Modify ack.vim mappings
-let g:ack_mappings = {
-  \ "<C-X>": "<C-W><CR><C-W>K",
-  \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t" }
+" Search the project for the string under the cursor
+function! s:fzf_rg_expand(query)
+  let l:expanded_query = expand(a:query)
+  execute 'FzfRg ' . l:expanded_query
+endfunction
+command! -nargs=0 FzfFindWordUnderCursor :call s:fzf_rg_expand('<cword>')
+nmap <leader>w :FzfFindWordUnderCursor<CR>
 
 " Disable indenting for haskell
 let g:haskell_indent_disable = 1
