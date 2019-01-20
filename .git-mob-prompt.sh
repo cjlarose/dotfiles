@@ -17,7 +17,6 @@ function __git_mob_ps1()
 {
   if current_mob=$(git config --get-all git-mob.co-author); then
     local emails=("${(@f)$(gsed -n 's/.*<\(.*\)>/\1/p' <<< "$current_mob")}")
-    local names=("${(@f)$(__get_coauthors_by_email "${emails[@]}")}")
-    echo "${names[@]}"
+    __get_coauthors_by_email "${emails[@]}"
   fi
 }
