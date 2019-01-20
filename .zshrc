@@ -19,7 +19,21 @@ autoload -Uz promptinit
 promptinit
 setopt PROMPT_SUBST
 . ~/.git-prompt.sh
-PROMPT=$'%~ %F{green}$(__git_ps1 "%s")%f $ '
+
+function __prompt()
+{
+  local prompt=$'%~ '
+
+  local git_prompt="$(__git_ps1 '%s')"
+  if [[ -n $git_prompt ]]; then
+    prompt="$prompt%F{green}$git_prompt%f "
+  fi
+
+  prompt="$prompt$ "
+  echo $prompt
+}
+
+PROMPT='$(__prompt)'
 
 # Allow command line editing in an external editor.
 autoload -Uz edit-command-line
