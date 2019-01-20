@@ -61,6 +61,7 @@ pip3 install neovim-remote
 
 ```
 brew install zsh
+ln -s $PWD/.git-mob-prompt.sh ~/.git-mob-prompt.sh
 ln -s /usr/local/etc/bash_completion.d/git-prompt.sh ~/.git-prompt.sh
 ln -s $PWD/.zshrc-aliases ~/.zshrc-aliases
 ln -s $PWD/.zshrc ~/.zshrc

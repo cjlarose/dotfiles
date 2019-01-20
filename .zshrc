@@ -19,6 +19,7 @@ autoload -Uz promptinit
 promptinit
 setopt PROMPT_SUBST
 . ~/.git-prompt.sh
+. ~/.git-mob-prompt.sh
 
 function __prompt()
 {
@@ -27,6 +28,11 @@ function __prompt()
   local git_prompt="$(__git_ps1 '%s')"
   if [[ -n $git_prompt ]]; then
     prompt="$prompt%F{green}$git_prompt%f "
+  fi
+
+  local git_mob_prompt="$(__git_mob_ps1)"
+  if [[ -n $git_mob_prompt ]]; then
+    prompt="$prompt%F{yellow}(mob: $git_mob_prompt)%f "
   fi
 
   prompt="$prompt$ "
