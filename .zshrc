@@ -23,20 +23,23 @@ setopt PROMPT_SUBST
 
 function __prompt()
 {
-  local prompt=$'%~ '
+  local parts=()
+
+  parts+=($'%~')
 
   local git_prompt="$(__git_ps1 '%s')"
   if [[ -n $git_prompt ]]; then
-    prompt="$prompt%F{green}$git_prompt%f "
+    parts+=("%F{green}$git_prompt%f")
   fi
 
   local git_mob_prompt="$(__git_mob_ps1)"
   if [[ -n $git_mob_prompt ]]; then
-    prompt="$prompt%F{yellow}(mob: $git_mob_prompt)%f "
+    parts+=("%F{yellow}(mob: $git_mob_prompt)%f")
   fi
 
-  prompt="$prompt$ "
-  echo $prompt
+  parts+=('$')
+
+  echo "${parts[@]} "
 }
 
 PROMPT='$(__prompt)'
