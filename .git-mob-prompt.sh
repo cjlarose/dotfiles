@@ -19,7 +19,7 @@ function __git_mob_ps1()
     local names=()
     while IFS=$'\n' read -r line; do
       names+=("$line")
-    done < <(gsed -n 's/.*<\(.*\)>/\1/p' <<< "$current_mob")
+    done < <(sed -n 's/.*<\(.*\)>/\1/p' <<< "$current_mob")
     __get_coauthors_by_email "${names[@]}"
   fi
 }
