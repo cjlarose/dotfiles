@@ -97,6 +97,8 @@ load-nvmrc
 export PATH=./node_modules/.bin:$PATH
 
 # fzf
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fasd
