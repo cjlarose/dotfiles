@@ -83,6 +83,9 @@
 #     "finder"      : false
 # ]
 
+# opens iTerm2
+cmd - return : "${HOME}"/bin/open_iterm2
+
 # focus window
 cmd - h : chunkc tiling::window --focus west
 cmd - j : chunkc tiling::window --focus south
