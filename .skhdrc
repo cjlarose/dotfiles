@@ -92,12 +92,6 @@ cmd - l : chunkc tiling::window --focus east
 # equalize size of windows
 shift + alt - 0 : chunkc tiling::desktop --equalize
 
-# swap window
-shift + alt - h : chunkc tiling::window --swap west
-shift + alt - j : chunkc tiling::window --swap south
-shift + alt - k : chunkc tiling::window --swap north
-shift + alt - l : chunkc tiling::window --swap east
-
 # move window
 shift + cmd - h : chunkc tiling::window --warp west
 shift + cmd - j : chunkc tiling::window --warp south
