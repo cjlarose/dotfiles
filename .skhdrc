@@ -107,16 +107,15 @@ shift + alt - left   : chunkc tiling::window --grid-layout 1:2:0:0:1:1
 # make floating window fill right-half of screen
 shift + alt - right  : chunkc tiling::window --grid-layout 1:2:1:0:1:1
 
-# create desktop, move window and follow focus
+# create desktop, move window
 shift + cmd - n : chunkc tiling::desktop --create;\
                   id=$(chunkc tiling::query --desktops-for-monitor $(chunkc tiling::query --monitor-for-desktop $(chunkc tiling::query --desktop id)));\
-                  chunkc tiling::window --send-to-desktop $(echo ${id##* });\
-                  chunkc tiling::desktop --focus $(echo ${id##* })
+                  chunkc tiling::window --send-to-desktop $(echo ${id##* })
 
-# create desktop and follow focus
+# create desktop
 cmd + alt - n : chunkc tiling::desktop --create;\
-                id=$(chunkc tiling::query --desktops-for-monitor $(chunkc tiling::query --monitor-for-desktop $(chunkc tiling::query --desktop id)));\
-                chunkc tiling::desktop --focus $(echo ${id##* })
+                id=$(chunkc tiling::query --desktops-for-monitor $(chunkc tiling::query --monitor-for-desktop $(chunkc tiling::query --desktop id)))
+
 # destroy desktop
 cmd + alt - w : chunkc tiling::desktop --annihilate
 
