@@ -87,19 +87,19 @@
 cmd - return : "${HOME}"/bin/open_iterm2
 
 # focus window
-cmd - h : chunkc tiling::window --focus west
-cmd - j : chunkc tiling::window --focus south
-cmd - k : chunkc tiling::window --focus north
-cmd - l : chunkc tiling::window --focus east
+cmd - j : chunkc tiling::window --focus west
+cmd - k : chunkc tiling::window --focus south
+cmd - l : chunkc tiling::window --focus north
+cmd - 0x29 : chunkc tiling::window --focus east
 
 # equalize size of windows
 shift + alt - 0 : chunkc tiling::desktop --equalize
 
 # move window
-shift + cmd - h : chunkc tiling::window --warp west
-shift + cmd - j : chunkc tiling::window --warp south
-shift + cmd - k : chunkc tiling::window --warp north
-shift + cmd - l : chunkc tiling::window --warp east
+shift + cmd - j : chunkc tiling::window --warp west
+shift + cmd - k : chunkc tiling::window --warp south
+shift + cmd - l : chunkc tiling::window --warp north
+shift + cmd - 0x29 : chunkc tiling::window --warp east
 
 # make floating window fill screen
 shift + alt - up     : chunkc tiling::window --grid-layout 1:1:0:0:1:1
