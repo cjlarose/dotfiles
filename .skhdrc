@@ -93,7 +93,7 @@ alt - l : chunkc tiling::window --focus north
 alt - 0x29 : chunkc tiling::window --focus east
 
 # equalize size of windows
-shift + alt - 0 : chunkc tiling::desktop --equalize
+shift + alt - 0x18 : chunkc tiling::desktop --equalize
 
 # move window
 shift + alt - j : chunkc tiling::window --warp west
