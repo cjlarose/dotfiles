@@ -83,6 +83,13 @@
 #     "finder"      : false
 # ]
 
+###############################################################################
+# Default mode                                                                #
+###############################################################################
+
+# add an on_enter command to the default mode
+:: default : chunkc border::color 0xff0f6288
+
 # opens iTerm2
 alt - return : "${HOME}"/bin/open_iterm2
 
@@ -91,9 +98,6 @@ alt - j : chunkc tiling::window --focus west
 alt - k : chunkc tiling::window --focus south
 alt - l : chunkc tiling::window --focus north
 alt - 0x29 : chunkc tiling::window --focus east
-
-# equalize size of windows
-shift + alt - 0x18 : chunkc tiling::desktop --equalize
 
 # move window
 shift + alt - j : chunkc tiling::window --warp west
@@ -152,16 +156,6 @@ ctrl + cmd - 1  : chunkc tiling::window --send-to-monitor 1; chunkc tiling::moni
 ctrl + cmd - 2  : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
 ctrl + cmd - 3  : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
 
-# rewize window
-shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west;\
-                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
-shift + alt - s : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south;\
-                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
-shift + alt - w : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north;\
-                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
-shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east;\
-                     chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
-
 # set insertion point for focused container
 ctrl + alt - f : chunkc tiling::window --use-insertion-point cancel
 ctrl + alt - h : chunkc tiling::window --use-insertion-point west
@@ -216,3 +210,29 @@ ctrl + alt - s : chunkc tiling::desktop --layout monocle
 ctrl + alt - d : chunkc tiling::desktop --layout float
 
 ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
+
+###############################################################################
+# Resize mode                                                                 #
+###############################################################################
+
+:: resize @ : chunkc border::color 0xff24ccaa
+
+# from 'default' mode, activate mode 'resize'
+shift + alt - r ; resize
+
+# from 'resize' mode, activate mode 'default'
+resize < shift + alt - r ; default
+resize < return ; default
+
+# resize window
+resize < j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west;\
+             chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+resize < k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south;\
+             chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+resize < l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north;\
+             chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+resize < 0x29 : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east;\
+                chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+
+# equalize size of windows
+resize < 0x18 : chunkc tiling::desktop --equalize
