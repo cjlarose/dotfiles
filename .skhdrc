@@ -84,7 +84,7 @@
 # ]
 
 # opens iTerm2
-cmd - return : "${HOME}"/bin/open_iterm2
+alt - return : "${HOME}"/bin/open_iterm2
 
 # focus window
 alt - j : chunkc tiling::window --focus west
