@@ -164,16 +164,16 @@ endfunction
 command! -nargs=0 StartCommandRunner :call s:start_command_runner()
 nmap <leader>rr :StartCommandRunner<CR>
 
-function! s:send_command(cmd)
+function! s:enqueue_command(cmd)
   call writefile([a:cmd], s:create_command_pipe())
 endfunction
 
-command! -nargs=1 SendCommand :call s:send_command(<q-args>)
+command! -nargs=1 EnqueueCommand :call s:enqueue_command(<q-args>)
 
-function! s:send_test_run_command()
+function! s:enqueue_test_run_at_current_line()
   let l:cmd = './bin/rails test --color ' . expand('%') . ':' . line('.')
-  call s:send_command(l:cmd)
+  call s:enqueue_command(l:cmd)
 endfunction
 
-command! -nargs=0 SendTestRunCommand :call s:send_test_run_command()
-nmap <leader>rt :SendTestRunCommand<CR>
+command! -nargs=0 EnqueueTestRunAtCurrentLine :call s:enqueue_test_run_at_current_line()
+nmap <leader>rt :EnqueueTestRunAtCurrentLine<CR>
