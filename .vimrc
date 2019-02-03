@@ -171,7 +171,7 @@ endfunction
 command! -nargs=1 SendCommand :call s:send_command(<q-args>)
 
 function! s:send_test_run_command()
-  let l:cmd = './bin/rails test ' . expand('%') . ':' . line('.')
+  let l:cmd = './bin/rails test --color ' . expand('%') . ':' . line('.')
   call s:send_command(l:cmd)
 endfunction
 
