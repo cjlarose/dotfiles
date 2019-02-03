@@ -145,3 +145,35 @@ endfunction
 
 command! -nargs=0 LogbookList :call s:logbook_list()
 nmap <leader>ll :LogbookList<CR>
+
+" Create a temporary named piped to send commands to
+function! s:create_command_pipe()
+  if !exists("g:command_pipe")
+    let g:command_pipe = tempname()
+    echom system("mkfifo -m 600 " . fnamemodify(g:command_pipe, ':S'))
+  endif
+  return g:command_pipe
+endfunction
+
+function! s:start_command_runner()
+  let l:command = 'xargs -I{} $SHELL -c {} <> ' . fnamemodify(s:create_command_pipe(), ':S')
+  execute 'terminal ' . l:command
+  execute 'file runner'
+endfunction
+
+command! -nargs=0 StartCommandRunner :call s:start_command_runner()
+nmap <leader>rr :StartCommandRunner<CR>
+
+function! s:send_command(cmd)
+  call writefile([a:cmd], s:create_command_pipe())
+endfunction
+
+command! -nargs=1 SendCommand :call s:send_command(<q-args>)
+
+function! s:send_test_run_command()
+  let l:cmd = './bin/rails test ' . expand('%') . ':' . line('.')
+  call s:send_command(l:cmd)
+endfunction
+
+command! -nargs=0 SendTestRunCommand :call s:send_test_run_command()
+nmap <leader>rt :SendTestRunCommand<CR>
