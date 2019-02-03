@@ -156,7 +156,7 @@ function! s:create_command_pipe()
 endfunction
 
 function! s:start_command_runner()
-  let l:command = 'xargs -I{} $SHELL -c {} <> ' . fnamemodify(s:create_command_pipe(), ':S')
+  let l:command = 'xargs -t -I{} $SHELL -c {} <> ' . fnamemodify(s:create_command_pipe(), ':S')
   execute 'terminal ' . l:command
   execute 'file runner'
 endfunction
