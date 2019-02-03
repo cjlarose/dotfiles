@@ -170,6 +170,14 @@ endfunction
 
 command! -nargs=1 EnqueueCommand :call s:enqueue_command(<q-args>)
 
+function! s:enqueue_test_run_current_file()
+  let l:cmd = './bin/rails test --color ' . expand('%')
+  call s:enqueue_command(l:cmd)
+endfunction
+
+command! -nargs=0 EnqueueTestRunCurrentFile :call s:enqueue_test_run_current_file()
+nmap <leader>rf :EnqueueTestRunCurrentFile<CR>
+
 function! s:enqueue_test_run_at_current_line()
   let l:cmd = './bin/rails test --color ' . expand('%') . ':' . line('.')
   call s:enqueue_command(l:cmd)
