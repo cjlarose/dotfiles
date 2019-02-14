@@ -12,3 +12,5 @@
 	autosquash = true
 [commit]
 	verbose = true
+[absorb]
+	maxStack = 100
