@@ -39,6 +39,9 @@ Plug 'tpope/vim-commentary'
 " Auto-formatting
 Plug 'Chiel92/vim-autoformat'
 
+" Logbook
+Plug '~/.vim/plugged/vim-logbook'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -130,20 +133,7 @@ let g:formatdef_brittany = '"brittany"'
 
 " Custom convenience function for creating logbook entries
 " https://routley.io/tech/2017/11/23/logbook.html
-function! s:logbook_new(name)
-  let l:basename = strftime('%Y-%m-%d') . '-' . a:name . '.md'
-  let l:fname = fnamemodify("~/logbook/" . l:basename, ":p")
-  execute "e " . l:fname
-endfunction
-
-command! -nargs=1 LogbookNew :call s:logbook_new(<q-args>)
 nmap <leader>ln :LogbookNew<space>
-
-function! s:logbook_list()
-  execute 'FzfFiles ' . fnamemodify("~/logbook/", ":p")
-endfunction
-
-command! -nargs=0 LogbookList :call s:logbook_list()
 nmap <leader>ll :LogbookList<CR>
 
 " Create a temporary named piped to send commands to

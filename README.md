@@ -49,6 +49,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+* Link custom plugins
+
+```
+ln -s $PWD/vim-plugins/vim-logbook ~/.vim/plugged/vim-logbook
+```
+
 Run `:PlugInstall`
 
 * Install neovim-remote
