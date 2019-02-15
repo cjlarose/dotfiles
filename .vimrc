@@ -39,9 +39,6 @@ Plug 'tpope/vim-commentary'
 " Auto-formatting
 Plug 'Chiel92/vim-autoformat'
 
-" Change cwd automatically to current file's project
-Plug 'airblade/vim-rooter'
-
 " Add plugins to &runtimepath
 call plug#end()
 
