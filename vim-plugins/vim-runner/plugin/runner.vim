@@ -1,10 +1,10 @@
 " Create a temporary named piped to send commands to
 function! s:create_command_pipe()
-  if !exists("g:command_pipe")
-    let g:command_pipe = tempname()
-    echom system("mkfifo -m 600 " . fnamemodify(g:command_pipe, ':S'))
+  if !exists("s:command_pipe")
+    let s:command_pipe = tempname()
+    echom system("mkfifo -m 600 " . fnamemodify(s:command_pipe, ':S'))
   endif
-  return g:command_pipe
+  return s:command_pipe
 endfunction
 
 function! s:start_command_runner()
