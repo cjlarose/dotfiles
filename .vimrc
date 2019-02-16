@@ -83,6 +83,9 @@ set hidden
 " Highlight purescript files as if they were Haskell files
 au BufRead,BufNewFile *.purs set filetype=haskell
 
+" Always show tab lie
+set showtabline=2
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
