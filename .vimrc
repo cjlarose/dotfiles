@@ -154,12 +154,12 @@ nmap <leader>rr :StartCommandRunner<CR>
 nmap <leader>rf :EnqueueTestRunCurrentFile<CR>
 nmap <leader>rt :EnqueueTestRunAtCurrentLine<CR>
 
-function! s:create_named_shell_terminal_buffer(name, ...)
+function! s:create_named_terminal_buffer(name, ...)
   let term_command = a:0 >= 1 ? a:1 : $SHELL
   enew
   call termopen(term_command, {'cwd': getcwd()})
   let b:term_title = a:name
 endfunction
 
-command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_shell_terminal_buffer(<f-args>)
+command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_terminal_buffer(<f-args>)
 nmap <leader>tn :CreateNamedShellTerminalBuffer<space>
