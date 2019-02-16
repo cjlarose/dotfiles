@@ -163,3 +163,4 @@ function! s:create_named_shell_terminal_buffer(name, ...)
 endfunction
 
 command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_shell_terminal_buffer(<f-args>)
+nmap <leader>tn :CreateNamedShellTerminalBuffer<space>
