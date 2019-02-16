@@ -2,45 +2,45 @@
 call plug#begin('~/.vim/plugged')
 
 " Sensible defaults
-Plug 'tpope/vim-sensible'
+Plug '~/.vim/plugged/vim-sensible'
 
 " Programming language support
-Plug 'vim-ruby/vim-ruby'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-scripts/VimClojure'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'vim-scripts/groovy.vim'
-Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug '~/.vim/plugged/vim-ruby'
+Plug '~/.vim/plugged/vim-javascript'
+Plug '~/.vim/plugged/VimClojure'
+Plug '~/.vim/plugged/haskell-vim'
+Plug '~/.vim/plugged/typescript-vim'
+Plug '~/.vim/plugged/groovy.vim'
+Plug '~/.vim/plugged/Jenkinsfile-vim-syntax'
 
 " Elm support
-Plug 'ElmCast/elm-vim'
+Plug '~/.vim/plugged/elm-vim'
 
 " Async make. Linting mostly
-Plug 'benekastah/neomake'
+Plug '~/.vim/plugged/neomake'
 
 " Color scheme
-Plug 'cjlarose/vim-hybrid'
+Plug '~/.vim/plugged/vim-hybrid'
 
 " Fuzzy file finder
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug '~/.vim/plugged/fzf.vim'
 
 " Git(hub) integration
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+Plug '~/.vim/plugged/vim-fugitive'
+Plug '~/.vim/plugged/vim-rhubarb'
 
 " Shortcuts for pairs of commands
-Plug 'tpope/vim-unimpaired'
+Plug '~/.vim/plugged/vim-unimpaired'
 
 " Commenting
-Plug 'tpope/vim-commentary'
+Plug '~/.vim/plugged/vim-commentary'
 
 " Auto-formatting
-Plug 'Chiel92/vim-autoformat'
+Plug '~/.vim/plugged/vim-autoformat'
 
 " Allows changing tab title easily
-Plug 'gcmt/taboo.vim'
+Plug '~/.vim/plugged/taboo.vim'
 
 " Custom plugins
 Plug '~/.vim/plugged/vim-logbook'

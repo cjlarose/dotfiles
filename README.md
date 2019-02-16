@@ -49,11 +49,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-* Link custom plugins
+* Link plugins
 
 ```
-ln -s $PWD/vim-plugins/vim-logbook ~/.vim/plugged/vim-logbook
-ln -s $PWD/vim-plugins/vim-runner ~/.vim/plugged/vim-runner
+ln -s $PWD/vim-plugins ~/.vim/plugged
 ```
 
 Run `:PlugInstall`
