@@ -153,3 +153,13 @@ nmap <leader>ll :LogbookList<CR>
 nmap <leader>rr :StartCommandRunner<CR>
 nmap <leader>rf :EnqueueTestRunCurrentFile<CR>
 nmap <leader>rt :EnqueueTestRunAtCurrentLine<CR>
+
+function! s:create_named_shell_terminal_buffer(name, ...)
+  let shell = $SHELL
+  let foreground_command = a:0 >= 1 ? a:1 : shellescape(l:shell)
+  let shell_command = 'printf "\e]0;' . a:name . '\a"; exec ' . foreground_command
+  let term_command = l:shell . ' -c ' . shellescape(shell_command)
+  call termopen(term_command, {'cwd': getcwd()})
+endfunction
+
+command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_shell_terminal_buffer(<f-args>)
