@@ -86,6 +86,9 @@ au BufRead,BufNewFile *.purs set filetype=haskell
 " Always show tab lie
 set showtabline=2
 
+" Set the statusline of terminal buffers to the term title
+autocmd TermOpen * setlocal statusline=%{b:term_title}
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
