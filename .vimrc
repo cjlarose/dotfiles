@@ -39,6 +39,9 @@ Plug 'tpope/vim-commentary'
 " Auto-formatting
 Plug 'Chiel92/vim-autoformat'
 
+" Allows changing tab title easily
+Plug 'gcmt/taboo.vim'
+
 " Custom plugins
 Plug '~/.vim/plugged/vim-logbook'
 Plug '~/.vim/plugged/vim-runner'
@@ -131,6 +134,9 @@ let g:formatters_ruby = ['rubocop']
 let g:formatdef_rubocop = "'~/bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
 let g:formatters_haskell = ['brittany']
 let g:formatdef_brittany = '"brittany"'
+
+" Tab title
+let g:taboo_tab_format = " %P "
 
 " Custom convenience function for creating logbook entries
 " https://routley.io/tech/2017/11/23/logbook.html
