@@ -155,8 +155,7 @@ nmap <leader>rf :EnqueueTestRunCurrentFile<CR>
 nmap <leader>rt :EnqueueTestRunAtCurrentLine<CR>
 
 function! s:create_named_shell_terminal_buffer(name, ...)
-  let shell = $SHELL
-  let term_command = a:0 >= 1 ? a:1 : shellescape(l:shell)
+  let term_command = a:0 >= 1 ? a:1 : $SHELL
   enew
   call termopen(term_command, {'cwd': getcwd()})
   let b:term_title = a:name
