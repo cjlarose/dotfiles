@@ -159,6 +159,7 @@ function! s:create_named_shell_terminal_buffer(name, ...)
   let foreground_command = a:0 >= 1 ? a:1 : shellescape(l:shell)
   let shell_command = 'printf "\e]0;' . a:name . '\a"; exec ' . foreground_command
   let term_command = l:shell . ' -c ' . shellescape(shell_command)
+  enew
   call termopen(term_command, {'cwd': getcwd()})
 endfunction
 
