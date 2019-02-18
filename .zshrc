@@ -53,7 +53,6 @@ bindkey '^x^e' edit-command-line
 autoload -U zmv
 
 # Program preferences
-export BROWSER=/usr/bin/chromium
 export EDITOR=vim
 export PAGER=/usr/bin/less
 export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
