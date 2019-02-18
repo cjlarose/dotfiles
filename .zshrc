@@ -10,7 +10,7 @@ setopt hist_ignore_all_dups
 bindkey -e
 
 # Completion
-zstyle :compinstall filename '/home/cjlarose/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
