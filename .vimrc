@@ -127,11 +127,11 @@ colorscheme hybrid
 let g:fzf_command_prefix = 'Fzf'
 
 " Key mappings for fzf plugin
-nmap <leader>ff :FzfGFiles<CR>
+nmap <leader>f :FzfGFiles<CR>
 nmap <leader>bb :FzfBuffers<CR>
 
 " Search the project for a specified string
-nmap <leader>fg :FzfRg<space>
+nmap <leader>g :FzfRg<space>
 
 " Search the project for the string under the cursor
 function! s:fzf_rg_expand(query)
