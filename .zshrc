@@ -92,6 +92,10 @@ function lb()
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # aliases
 . ~/.zshrc-aliases
 
