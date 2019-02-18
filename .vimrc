@@ -129,6 +129,7 @@ let g:fzf_command_prefix = 'Fzf'
 " Key mappings for fzf plugin
 nmap <leader>f :FzfGFiles<CR>
 nmap <leader>bb :FzfBuffers<CR>
+nmap <leader>c :FzfHistory:<CR>
 
 " Search the project for a specified string
 nmap <leader>g :FzfRg<space>
