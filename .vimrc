@@ -77,8 +77,18 @@ let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
 " Show whitespace characters (tabs, trailing spaces)
 set list
 
-" Allow modified buffers to be hidden
-set hidden
+" Allow modified buffers to be hidden (except for netrw buffers)
+" https://github.com/tpope/vim-vinegar/issues/13
+set nohidden
+augroup netrw_buf_hidden_fix
+  autocmd!
+
+  " Set all non-netrw buffers to bufhidden=hide
+  autocmd BufWinEnter *
+    \  if &ft != 'netrw'
+    \|   set bufhidden=hide
+    \| endif
+augroup end
 
 " Highlight purescript files as if they were Haskell files
 au BufRead,BufNewFile *.purs set filetype=haskell
