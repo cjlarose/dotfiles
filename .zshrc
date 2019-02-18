@@ -60,12 +60,6 @@ export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
 # Add ~/bin to path
 export PATH="$HOME/bin:$PATH"
 
-# rbenv
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
 # nvm
 [ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
