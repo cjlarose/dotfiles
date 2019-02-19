@@ -42,6 +42,9 @@ Plug '~/.vim/plugged/vim-autoformat'
 " Allows changing tab title easily
 Plug '~/.vim/plugged/taboo.vim'
 
+" Better session management
+Plug '~/.vim/plugged/vim-obsession'
+
 " Custom plugins
 Plug '~/.vim/plugged/vim-logbook'
 Plug '~/.vim/plugged/vim-runner'
