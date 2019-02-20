@@ -178,6 +178,9 @@ endfunction
 command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_terminal_buffer(<f-args>)
 nmap <leader>tn :CreateNamedShellTerminalBuffer<space>
 
+command! -nargs=1 RenameTerminalBuffer let b:term_title = <q-args>
+nmap <leader>tr :RenameTerminalBuffer<space>
+
 " delete buffer but keep window open
 " https://superuser.com/questions/289285/how-to-close-buffer-without-closing-the-window
 command! DeleteBufferSafely :bn|:bd#
