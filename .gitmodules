@@ -52,3 +52,6 @@
 [submodule "vim-plugins/vim-obsession"]
 	path = vim-plugins/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule "vim-plugins/fzf.vim"]
+	path = vim-plugins/fzf.vim
+	url = https://github.com/cjlarose/fzf.vim.git
