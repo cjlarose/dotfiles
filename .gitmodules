@@ -31,9 +31,6 @@
 [submodule "vim-plugins/vim-hybrid"]
 	path = vim-plugins/vim-hybrid
 	url = https://github.com/cjlarose/vim-hybrid.git
-[submodule "vim-plugins/fzf.vim"]
-	path = vim-plugins/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule "vim-plugins/vim-fugitive"]
 	path = vim-plugins/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
