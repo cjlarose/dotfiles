@@ -172,13 +172,17 @@ function! s:create_named_terminal_buffer(name, ...)
   let term_command = a:0 >= 1 ? a:1 : $SHELL
   enew
   call termopen(term_command, {'cwd': getcwd()})
-  let b:term_title = a:name
+  call s:rename_terminal_buffer(a:name)
 endfunction
 
 command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_terminal_buffer(<f-args>)
 nmap <leader>tn :CreateNamedShellTerminalBuffer<space>
 
-command! -nargs=1 RenameTerminalBuffer let b:term_title = <q-args>
+function! s:rename_terminal_buffer(name)
+  let b:term_title = a:name . ' (' . bufname('%') . ')'
+endfunction
+
+command! -nargs=1 RenameTerminalBuffer :call s:rename_terminal_buffer(<q-args>)
 nmap <leader>tr :RenameTerminalBuffer<space>
 
 " delete buffer but keep window open
