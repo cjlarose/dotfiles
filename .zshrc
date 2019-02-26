@@ -96,6 +96,14 @@ export PATH="$HOME/.cargo/bin:$PATH"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# print $(git diff) as a git-apply statement
+function git-make-patch-statement() {
+  DIFF=$(git diff)
+  echo 'git apply <<PATCH'
+  echo $DIFF
+  echo 'PATCH'
+}
+
 # aliases
 . ~/.zshrc-aliases
 
