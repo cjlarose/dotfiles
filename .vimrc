@@ -12,6 +12,7 @@ Plug '~/.vim/plugged/haskell-vim'
 Plug '~/.vim/plugged/typescript-vim'
 Plug '~/.vim/plugged/groovy.vim'
 Plug '~/.vim/plugged/Jenkinsfile-vim-syntax'
+Plug '~/.vim/plugged/vim-markdown'
 
 " Elm support
 Plug '~/.vim/plugged/elm-vim'
