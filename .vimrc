@@ -190,3 +190,6 @@ nmap <leader>tr :RenameTerminalBuffer<space>
 " https://superuser.com/questions/289285/how-to-close-buffer-without-closing-the-window
 command! DeleteBufferSafely :bn|:bd#
 nmap <leader>bd :DeleteBufferSafely<CR>
+
+" Disable default key bindings for vim-markdown
+let g:vim_markdown_no_default_key_mappings = 1
