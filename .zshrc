@@ -56,6 +56,7 @@ autoload -U zmv
 export EDITOR=vim
 export PAGER=/usr/bin/less
 export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
+export THOR_MERGE='nvr -s -d'
 
 # Add ~/bin to path
 export PATH="$HOME/bin:$PATH"
