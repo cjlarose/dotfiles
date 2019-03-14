@@ -100,7 +100,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # print $(git diff) as a git-apply statement
 function git-make-patch-statement() {
   DIFF=$(git diff)
-  echo 'git apply <<PATCH'
+  echo 'git apply <<'"'"'PATCH'"'"
   echo $DIFF
   echo 'PATCH'
 }
