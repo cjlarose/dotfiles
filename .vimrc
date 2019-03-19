@@ -65,6 +65,10 @@ colorscheme hybrid
 " ctrlspace
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
+if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --hidden --nocolor -g ""'
+endif
+
 " set prefix for FZF functions
 let g:fzf_command_prefix = 'Fzf'
 
