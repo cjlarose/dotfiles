@@ -42,20 +42,12 @@ brew install neovim
 ln -s $PWD/.vimrc ~/.vimrc
 ```
 
-* Install vim-plug.
-
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 * Link plugins
 
 ```
-ln -s $PWD/vim-plugins ~/.vim/plugged
+mkdir -p ~/.local/share/nvim/site/pack/plugins
+ln -s $PWD/vim-plugins ~/.local/share/nvim/site/pack/plugins/start
 ```
-
-Run `:PlugInstall`
 
 * Install neovim-remote
 
