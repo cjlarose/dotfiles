@@ -61,3 +61,6 @@
 [submodule "vim-plugins/ack.vim"]
 	path = vim-plugins/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim-plugins/fzf"]
+	path = vim-plugins/fzf
+	url = https://github.com/junegunn/fzf.git
