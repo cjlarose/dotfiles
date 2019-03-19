@@ -62,6 +62,9 @@ let g:hybrid_reduced_contrast = 1
 set background=dark
 colorscheme hybrid
 
+" ctrlspace
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+
 " set prefix for FZF functions
 let g:fzf_command_prefix = 'Fzf'
 
