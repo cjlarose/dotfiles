@@ -64,3 +64,6 @@
 [submodule "vim-plugins/fzf"]
 	path = vim-plugins/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim-plugins/vim-ctrlspace"]
+	path = vim-plugins/vim-ctrlspace
+	url = https://github.com/vim-ctrlspace/vim-ctrlspace.git
