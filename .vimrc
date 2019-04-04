@@ -42,9 +42,6 @@ augroup end
 " Highlight purescript files as if they were Haskell files
 au BufRead,BufNewFile *.purs set filetype=haskell
 
-" Always show tab lie
-set showtabline=2
-
 " Set the statusline of terminal buffers to the term title
 autocmd TermOpen * setlocal statusline=%{b:term_title}
 
@@ -103,9 +100,6 @@ let g:formatters_ruby = ['rubocop']
 let g:formatdef_rubocop = "'~/bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
 let g:formatters_haskell = ['brittany']
 let g:formatdef_brittany = '"brittany"'
-
-" Tab title
-let g:taboo_tab_format = " %P "
 
 " Custom convenience function for creating logbook entries
 " https://routley.io/tech/2017/11/23/logbook.html
