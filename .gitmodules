@@ -46,9 +46,6 @@
 [submodule "vim-plugins/vim-autoformat"]
 	path = vim-plugins/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git
-[submodule "vim-plugins/taboo.vim"]
-	path = vim-plugins/taboo.vim
-	url = https://github.com/gcmt/taboo.vim.git
 [submodule "vim-plugins/vim-obsession"]
 	path = vim-plugins/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
