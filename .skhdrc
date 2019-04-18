@@ -126,14 +126,6 @@ cmd + alt - n : chunkc tiling::desktop --create;\
 # destroy desktop
 cmd + alt - w : chunkc tiling::desktop --annihilate
 
-# fast focus desktop
-alt - 1 : chunkc tiling::desktop --focus 1
-alt - 2 : chunkc tiling::desktop --focus 2
-alt - 3 : chunkc tiling::desktop --focus 3
-alt - 4 : chunkc tiling::desktop --focus 4
-alt - 5 : chunkc tiling::desktop --focus 5
-alt - 6 : chunkc tiling::desktop --focus 6
-
 # send window to desktop
 shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
 shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
