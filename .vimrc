@@ -101,6 +101,9 @@ let g:formatdef_rubocop = "'~/bin/rubocop-auto-correct-range '.a:firstline.' '.a
 let g:formatters_haskell = ['brittany']
 let g:formatdef_brittany = '"brittany"'
 
+" Tab title
+let g:taboo_tab_format = " %P "
+
 " Custom convenience function for creating logbook entries
 " https://routley.io/tech/2017/11/23/logbook.html
 nmap <leader>ln :LogbookNew<space>
