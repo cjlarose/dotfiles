@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# run a bunch of test files in parallel
+function main() {
+  local files=("$@")
+  local regex="^(${(j:|:)files})$"
+  RAILS_ENV=test bundle exec rake 'parallel:fine_grain_test[^'"$regex"']'
+}
+
+main $*

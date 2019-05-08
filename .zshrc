@@ -105,13 +105,6 @@ function git-make-patch-statement() {
   echo 'PATCH'
 }
 
-# run a bunch of test files in parallel
-function ptest() {
-  local files=("$@")
-  local regex="^(${(j:|:)files})$"
-  RAILS_ENV=test bundle exec rake 'parallel:fine_grain_test[^'"$regex"']'
-}
-
 # aliases
 . ~/.zshrc-aliases
 
