@@ -75,7 +75,7 @@ eval "$(fasd --init auto)"
 # send rg through pager
 function rgp()
 {
-  rg --pretty "$@" | less
+  rg --pretty --sort path "$@" | less
 }
 
 # https://routley.io/tech/2017/11/23/logbook.html
