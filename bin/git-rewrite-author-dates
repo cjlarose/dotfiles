@@ -1,6 +1,11 @@
 #!/bin/bash
 # See https://github.com/isaacs/github/issues/386
+
+base_branch=origin/develop
+merge_base=$(git merge-base HEAD $base_branch)
 git filter-branch \
-  --env-filter 'GIT_AUTHOR_DATE=`date +%s`' \
-  --msg-filter 'sleep 1 && cat' \
+  --setup 'START_TIME=`date +%s`' \
+  --env-filter '
+    COMMIT_DISTANCE=$(git rev-list '"$merge_base"'..$GIT_COMMIT | wc -l)
+    GIT_AUTHOR_DATE=$(($START_TIME + $COMMIT_DISTANCE))' \
   origin/develop..HEAD
