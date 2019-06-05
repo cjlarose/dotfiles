@@ -1,0 +1,6 @@
+#!/bin/bash
+# See https://github.com/isaacs/github/issues/386
+git filter-branch \
+  --env-filter 'GIT_AUTHOR_DATE=`date +%s`' \
+  --msg-filter 'sleep 1 && cat' \
+  origin/develop..HEAD
