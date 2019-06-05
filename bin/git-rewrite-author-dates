@@ -8,4 +8,4 @@ git filter-branch \
   --env-filter '
     COMMIT_DISTANCE=$(git rev-list '"$merge_base"'..$GIT_COMMIT | wc -l)
     GIT_AUTHOR_DATE=$(($START_TIME + $COMMIT_DISTANCE))' \
-  origin/develop..HEAD
+  $base_branch..HEAD
