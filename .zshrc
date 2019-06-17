@@ -53,7 +53,7 @@ bindkey '^x^e' edit-command-line
 autoload -U zmv
 
 # Program preferences
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=/usr/bin/less
 export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
 export THOR_MERGE='nvr -s -d'
