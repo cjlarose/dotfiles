@@ -5,7 +5,7 @@
 	email = cjlarose@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = nvim
 [color]
 	ui = true
 [rebase]
