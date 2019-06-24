@@ -57,3 +57,6 @@ function git-make-patch-statement() {
   echo "$DIFF"
   echo 'PATCH'
 }
+
+# Aliases
+. ~/aliases.sh
