@@ -67,6 +67,4 @@ function git-make-patch-statement() {
 . ~/aliases.sh
 
 # Run local setup
-if [ -f "$HOME/.bashrc-local" ]; then
-  . ~/.bashrc-local
-fi
+[ -f "$HOME/.bashrc-local" ] && . ~/.bashrc-local
