@@ -63,7 +63,8 @@ function rgp()
   rg --pretty --sort path "$@" | less
 }
 
-function git-make-patch-statement() {
+function git-make-patch-statement()
+{
   DIFF=$(git diff)
   echo 'git apply <<'"'"'PATCH'"'"
   echo "$DIFF"
