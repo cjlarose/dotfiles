@@ -1,0 +1,25 @@
+# Prompt configuration
+
+. /usr/local/etc/bash_completion.d/git-prompt.sh
+
+function __prompt()
+{
+  local parts=()
+
+  parts+=('\w')
+
+  local git_prompt
+  if git_prompt="$(__git_ps1 '%s' 2> /dev/null)" && [[ -n $git_prompt ]]; then
+    parts+=("\[\e[32m\]$git_prompt\[\e[00m\]")
+  fi
+
+  parts+=('$')
+
+  echo "${parts[*]} "
+}
+
+function set_bash_prompt()
+{
+  PS1="$(__prompt)"
+}
+PROMPT_COMMAND=set_bash_prompt
