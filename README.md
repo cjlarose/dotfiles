@@ -19,12 +19,6 @@ brew install fzf
 brew install ripgrep
 ```
 
-## Directory switching
-
-```
-brew install fasd
-```
-
 ## Git setup
 
 ```
