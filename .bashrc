@@ -45,6 +45,11 @@ export PATH=./node_modules/.bin:$PATH
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# fzf
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Convenience functions
 function rgp()
 {
