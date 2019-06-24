@@ -19,12 +19,6 @@ brew install fzf
 brew install ripgrep
 ```
 
-## Directory switching
-
-```
-brew install fasd
-```
-
 ## Git setup
 
 ```
@@ -58,12 +52,10 @@ pip3 install neovim-remote
 ## Shell
 
 ```
-brew install zsh
 ln -s $PWD/.git-mob-prompt.sh ~/.git-mob-prompt.sh
-ln -s /usr/local/etc/bash_completion.d/git-prompt.sh ~/.git-prompt.sh
-ln -s $PWD/.zshrc-aliases ~/.zshrc-aliases
-ln -s $PWD/.zshrc ~/.zshrc
-chsh -s /usr/local/bin/zsh
+ln -s $PWD/aliases.sh ~/aliases.sh
+ln -s $PWD/.bashrc ~/.bashrc
+ln -s $PWD/.bash_profile ~/.bash_profile
 ```
 
 ## asdf
