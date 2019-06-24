@@ -23,3 +23,7 @@ function set_bash_prompt()
   PS1="$(__prompt)"
 }
 PROMPT_COMMAND=set_bash_prompt
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
