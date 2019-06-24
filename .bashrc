@@ -44,3 +44,16 @@ export PATH=./node_modules/.bin:$PATH
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# Convenience functions
+function rgp()
+{
+  rg --pretty --sort path "$@" | less
+}
+
+function git-make-patch-statement() {
+  DIFF=$(git diff)
+  echo 'git apply <<'"'"'PATCH'"'"
+  echo "$DIFF"
+  echo 'PATCH'
+}
