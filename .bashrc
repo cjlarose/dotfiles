@@ -30,6 +30,17 @@ function set_bash_prompt()
 }
 PROMPT_COMMAND=set_bash_prompt
 
+# Program preferences
+export EDITOR=nvim
+export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
+export THOR_MERGE='nvr -s -d'
+
+# Add ~/bin to path
+export PATH="$HOME/bin:$PATH"
+
+# Add node_modules to PATH
+export PATH=./node_modules/.bin:$PATH
+
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
