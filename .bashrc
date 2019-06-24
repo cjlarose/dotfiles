@@ -1,3 +1,9 @@
+# History configuration
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+shopt -s histappend
+export HISTCONTROL=ignorespace:erasedups
+
 # Prompt configuration
 
 . /usr/local/etc/bash_completion.d/git-prompt.sh
@@ -24,11 +30,12 @@ function __prompt()
   echo "${parts[*]} "
 }
 
-function set_bash_prompt()
+function prompt_command()
 {
+  history -a
   PS1="$(__prompt)"
 }
-PROMPT_COMMAND=set_bash_prompt
+PROMPT_COMMAND=prompt_command
 
 # Program preferences
 export EDITOR=nvim
