@@ -52,9 +52,6 @@ autocmd TermOpen * setlocal statusline=%{b:term_title}
 " Run neomake on every write
 autocmd! BufWritePost * Neomake
 
-" Use 'bundle exec' when running rubocop in neomake
-let g:neomake_ruby_rubocop_maker_exe = 'bundle exec rubocop'
-
 " Do not execute eslint from cwd
 let g:neomake_javascript_eslint_maker = {
         \ 'args': ['--format=compact'],
