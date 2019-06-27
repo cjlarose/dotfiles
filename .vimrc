@@ -131,6 +131,9 @@ nmap <leader>tr :RenameTerminalBuffer<space>
 command! -nargs=0 CreateGitTerminalBuffer :call s:create_named_terminal_buffer('git')
 nmap <leader>tg :CreateGitTerminalBuffer<CR>
 
+command! -nargs=0 CreateYarnWatchTerminalBuffer :call s:create_named_terminal_buffer('yarn', './bin/yarn', 'watch')
+nmap <leader>ty :CreateYarnWatchTerminalBuffer<CR>
+
 " delete buffer but keep window open
 " https://superuser.com/questions/289285/how-to-close-buffer-without-closing-the-window
 command! DeleteBufferSafely :bn|:bd#
