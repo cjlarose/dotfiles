@@ -134,6 +134,12 @@ nmap <leader>tg :CreateGitTerminalBuffer<CR>
 command! -nargs=0 CreateYarnWatchTerminalBuffer :call s:create_named_terminal_buffer('yarn', './bin/yarn', 'watch')
 nmap <leader>ty :CreateYarnWatchTerminalBuffer<CR>
 
+command! -nargs=0 CreateShoryukenWorkerTerminalBuffer :call s:create_named_terminal_buffer('worker', 'bundle', 'exec', 'shoryuken', '-R')
+nmap <leader>tw :CreateShoryukenWorkerTerminalBuffer<CR>
+
+command! -nargs=0 CreateRailsConsoleTerminalBuffer :call s:create_named_terminal_buffer('console', './bin/rails', 'console')
+nmap <leader>tc :CreateRailsConsoleTerminalBuffer<CR>
+
 " delete buffer but keep window open
 " https://superuser.com/questions/289285/how-to-close-buffer-without-closing-the-window
 command! DeleteBufferSafely :bn|:bd#
