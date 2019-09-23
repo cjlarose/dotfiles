@@ -16,3 +16,6 @@ set PATH ./node_modules/.bin $PATH
 
 # asdf
 source ~/.asdf/asdf.fish
+
+# krew
+set PATH ~/.krew/bin $PATH
