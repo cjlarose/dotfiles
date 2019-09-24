@@ -6,13 +6,6 @@
 
 [1password]: https://1password.com/downloads/
 
-## File finder
-
-```
-brew install fzf
-/usr/local/opt/fzf/install
-```
-
 ## Search
 
 ```
@@ -49,15 +42,6 @@ ln -s $PWD/vim-plugins ~/.local/share/nvim/site/pack/plugins/start
 pip3 install neovim-remote
 ```
 
-## Shell
-
-```
-ln -s $PWD/.git-mob-prompt.sh ~/.git-mob-prompt.sh
-ln -s $PWD/aliases.sh ~/aliases.sh
-ln -s $PWD/.bashrc ~/.bashrc
-ln -s $PWD/.bash_profile ~/.bash_profile
-```
-
 ## asdf
 
 Follow [official instructions][asdf] to install `asdf`.
@@ -78,3 +62,21 @@ asdf plugin-add nodejs
 Then follow [instructions][asdf-nodejs] for bootstrapping trust with gpg.
 
 [asdf-nodejs]: https://github.com/asdf-vm/asdf-nodejs#using-a-dedicated-openpgp-keyring
+
+## Shell
+
+```sh
+brew install fish
+ln -s $PWD/fish ~/.config/fish
+chsh -s /usr/local/bin/fish
+
+mkdir -p ~/.config/fish/completions
+ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions/asdf.fish
+```
+
+## File finder
+
+```
+brew install fzf
+/usr/local/opt/fzf/install
+```
