@@ -5,8 +5,8 @@ function fzf_custom_key_bindings
     set -l repo_info (git rev-parse --git-dir --is-inside-git-dir \
       --is-bare-repository --is-inside-work-tree \
       --short HEAD 2>/dev/null)
-    and set -l branches (git branch --all | grep -v HEAD)
     and begin
+      set -l branches (git branch --all | grep -v HEAD)
       set -l result
       string join \n $branches | \
         fzf --no-multi --height 40% --reverse --query "$last_token" | \
