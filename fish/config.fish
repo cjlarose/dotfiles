@@ -11,6 +11,9 @@ alias ptest='env MYCASE__TESTING__PARALLELISM__ENABLED=1 SEED=1337 bundle exec r
 alias crtest='env CHROME_DEBUG=1 SEED=1337 bundle exec ruby -Itest'
 alias vim='nvim'
 
+# Add $HOME/bin to $PATH
+set PATH "$HOME/bin" $PATH
+
 # add ./node_modules to $PATH
 set PATH ./node_modules/.bin $PATH
 
