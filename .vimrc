@@ -75,7 +75,9 @@ nmap <leader>bb :FzfBuffers<CR>
 nmap <leader>c :FzfHistory:<CR>
 
 " Ack.vim config
-let g:ack_default_options = ' -s -H --nopager --nocolor --nogroup --column --sort-files'
+if executable('rg')
+  let g:ackprg = 'rg --sort-files --vimgrep'
+endif
 let g:ack_mappings = {
   \ "<C-X>": "<C-W><CR><C-W>K",
   \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t" }
