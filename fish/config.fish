@@ -13,6 +13,13 @@ alias vim='nvim'
 if status --is-interactive
   abbr --add -g ll ls -al
   abbr --add -g be bundle exec
+
+  abbr --add --global gd git diff
+  abbr --add --global gdc git diff --cached
+  abbr --add --global gs git status
+  abbr --add --global gc git commit
+  abbr --add --global ga git add
+  abbr --add --global gw git switch
 end
 
 # Add $HOME/bin to $PATH
