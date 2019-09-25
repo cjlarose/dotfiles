@@ -75,8 +75,8 @@ nmap <leader>bb :FzfBuffers<CR>
 nmap <leader>c :FzfHistory:<CR>
 
 " Ack.vim config
-if executable('rg')
-  let g:ackprg = 'rg --sort-files --vimgrep'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
 endif
 let g:ack_mappings = {
   \ "<C-X>": "<C-W><CR><C-W>K",
