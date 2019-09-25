@@ -45,6 +45,9 @@ au BufRead,BufNewFile *.purs set filetype=haskell
 " Set the statusline of terminal buffers to the term title
 autocmd TermOpen * setlocal statusline=%{b:term_title}
 
+" Open git commit editor in a split window
+let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
