@@ -1,6 +1,6 @@
 #!/bin/bash
 
-content=$(</dev/stdin)
+IFS= read -r -d '' content < /dev/stdin
 with_escaped_quotes=${content//\'/\'\'}
 command='let @"='"'""$with_escaped_quotes""'"
 nvr -c "$command"
