@@ -1,0 +1,4 @@
+#!/bin/bash
+
+IFS= read -r -d '' content < <(nvr --remote-expr '@"')
+echo -n "${content%?}"
