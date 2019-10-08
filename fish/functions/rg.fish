@@ -1,3 +1,3 @@
 function rg
-  command rg --pretty --sort path "$argv" | less
+  command rg --pretty --sort path $argv | less
 end
