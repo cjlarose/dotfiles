@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function git-make-patch-statement()
+{
+  DIFF=$(git diff)
+  echo 'git apply <<'"'"'PATCH'"'"
+  echo "$DIFF"
+  echo 'PATCH'
+}
+
+git-make-patch-statement
