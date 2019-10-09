@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./bin/yarn cache clean && rm -rf node_modules && ./bin/yarn --pure-lockfile --offline --no-progress
