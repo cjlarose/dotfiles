@@ -48,6 +48,11 @@ autocmd TermOpen * setlocal statusline=%{b:term_title}
 " Open git commit editor in a split window
 let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
 
+" Disable scrolloff because it makes curses-like programs jump around in
+" terminal buffers
+" https://github.com/neovim/neovim/issues/11072
+set scrolloff=0
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
