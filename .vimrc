@@ -60,8 +60,17 @@ set scrolloff=0
 " Run neomake on every write
 autocmd! BufWritePost * Neomake
 
+" Turn on eslint for typescript files
+let g:neomake_typescript_enabled_makers = ['tsc', 'eslint']
+"
 " Do not execute eslint from cwd
 let g:neomake_javascript_eslint_maker = {
+        \ 'args': ['--format=compact'],
+        \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+        \   '%W%f: line %l\, col %c\, Warning - %m,%-G,%-G%*\d problems%#',
+        \ 'output_stream': 'stdout',
+        \ }
+let g:neomake_typescript_eslint_maker = {
         \ 'args': ['--format=compact'],
         \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
         \   '%W%f: line %l\, col %c\, Warning - %m,%-G,%-G%*\d problems%#',
