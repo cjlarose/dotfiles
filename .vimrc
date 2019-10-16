@@ -86,10 +86,32 @@ colorscheme hybrid
 " set prefix for FZF functions
 let g:fzf_command_prefix = 'Fzf'
 
+" Quickly switch tabs with fzf
+function! s:fzf_tab_sink(line)
+  let list = matchlist(a:line, '^ *\([0-9]\+\)')
+  let tabnr = list[1]
+  execute tabnr . 'tabnext'
+endfunction
+
+function! s:fzf_list_tabs(...)
+  let lines = []
+  for t in range(1, tabpagenr('$'))
+    let pwd = getcwd(0, t)
+    let pwd_last_component = get(split(pwd, '/'), -1, '')
+    let line = printf('%s %s', printf('%2d', t), pwd_last_component)
+    call add(lines, line)
+  endfor
+
+  return fzf#run({'source': lines, 'sink': function('s:fzf_tab_sink'), 'down': '30%'})
+endfunction
+
+command! -nargs=0 FzfTabs :call s:fzf_list_tabs()
+
 " Key mappings for fzf plugin
 nmap <leader>f :FzfGFiles<CR>
 nmap <leader>bb :FzfBuffers<CR>
 nmap <leader>c :FzfHistory:<CR>
+nmap <leader>gt :FzfTabs<CR>
 
 " Ack.vim config
 if executable('rg')
