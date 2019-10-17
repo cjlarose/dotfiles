@@ -53,6 +53,9 @@ let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
 " https://github.com/neovim/neovim/issues/11072
 set scrolloff=0
 
+" Never show tabline
+set showtabline=0
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
