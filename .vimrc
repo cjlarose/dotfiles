@@ -100,7 +100,7 @@ augroup fzf_tabs
 augroup END
 
 function! s:fzf_tab_sink(line)
-  let list = matchlist(a:line, '^ *\([0-9]\+\)')
+  let list = matchlist(a:line, '^\[\([0-9]\+\)\]')
   let tabnr = list[1]
   execute tabnr . 'tabnext'
 endfunction
@@ -115,7 +115,7 @@ function! s:fzf_list_tabs(...)
   for t in sort(range(1, tabpagenr('$')), 's:sort_tabs_mru')
     let pwd = getcwd(0, t)
     let pwd_last_component = get(split(pwd, '/'), -1, '')
-    let line = printf('%s %s', printf('%2d', t), pwd_last_component)
+    let line = printf("[%d]\t%s", t, pwd_last_component)
     call add(lines, line)
   endfor
 
