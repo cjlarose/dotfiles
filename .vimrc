@@ -90,22 +90,41 @@ colorscheme hybrid
 let g:fzf_command_prefix = 'Fzf'
 
 " Quickly switch tabs with fzf
+if !exists('g:fzf_tabs_mru')
+  let g:fzf_tabs_mru = {}
+endif
+augroup fzf_tabs
+  autocmd!
+  autocmd TabEnter * let g:fzf_tabs_mru[tabpagenr()] = localtime()
+  autocmd TabClosed * silent! call remove(g:fzf_tabs_mru, expand('<afile>'))
+augroup END
+
 function! s:fzf_tab_sink(line)
   let list = matchlist(a:line, '^ *\([0-9]\+\)')
   let tabnr = list[1]
   execute tabnr . 'tabnext'
 endfunction
 
+function! s:sort_tabs_mru(...)
+  let [t1, t2] = map(copy(a:000), 'get(g:fzf_tabs_mru, v:val, v:val)')
+  return t1 - t2
+endfunction
+
 function! s:fzf_list_tabs(...)
   let lines = []
-  for t in range(1, tabpagenr('$'))
+  for t in sort(range(1, tabpagenr('$')), 's:sort_tabs_mru')
     let pwd = getcwd(0, t)
     let pwd_last_component = get(split(pwd, '/'), -1, '')
     let line = printf('%s %s', printf('%2d', t), pwd_last_component)
     call add(lines, line)
   endfor
 
-  return fzf#run({'source': lines, 'sink': function('s:fzf_tab_sink'), 'down': '30%'})
+  return fzf#run({
+  \ 'source': reverse(lines),
+  \ 'sink': function('s:fzf_tab_sink'),
+  \ 'down': '30%',
+  \ 'options': ['--header-lines=1']
+  \})
 endfunction
 
 command! -nargs=0 FzfTabs :call s:fzf_list_tabs()
