@@ -61,6 +61,3 @@
 [submodule "vim-plugins/fzf"]
 	path = vim-plugins/fzf
 	url = https://github.com/junegunn/fzf.git
-[submodule "vim-plugins/taboo.vim"]
-	path = vim-plugins/taboo.vim
-	url = https://github.com/gcmt/taboo.vim.git
