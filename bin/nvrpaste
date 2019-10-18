@@ -1,4 +1,4 @@
 #!/bin/bash
 
-IFS= read -r -d '' content < <(nvr --remote-expr '@"')
+IFS= read -r -d '' content < <(nvr --remote-expr 'getreg()')
 echo -n "${content%?}"
