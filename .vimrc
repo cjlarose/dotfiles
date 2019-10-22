@@ -170,7 +170,7 @@ nmap <leader>rf :EnqueueTestRunCurrentFile<CR>
 nmap <leader>rt :EnqueueTestRunAtCurrentLine<CR>
 
 function! s:create_named_terminal_buffer(name, ...)
-  let term_command = a:0 >= 1 ? a:000 : $SHELL
+  let term_command = a:0 >= 1 ? a:000 : &shell
   enew
   call termopen(term_command, {'cwd': getcwd()})
   call s:rename_terminal_buffer(a:name)
