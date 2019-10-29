@@ -42,6 +42,9 @@ augroup end
 " Highlight purescript files as if they were Haskell files
 au BufRead,BufNewFile *.purs set filetype=haskell
 
+" Fix syntax highlighting for tsx files
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
 " Set the statusline of terminal buffers to the term title
 autocmd TermOpen * setlocal statusline=%{b:term_title}
 
