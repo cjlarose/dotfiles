@@ -66,12 +66,8 @@ Then follow [instructions][asdf-nodejs] for bootstrapping trust with gpg.
 ## Shell
 
 ```sh
-brew install fish
-ln -s $PWD/fish ~/.config/fish
-chsh -s /usr/local/bin/fish
-
-mkdir -p ~/.config/fish/completions
-ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions/asdf.fish
+ln -s $PWD/.zshrc ~/.zshrc
+chsh -s /bin/zsh
 ```
 
 ## File finder
