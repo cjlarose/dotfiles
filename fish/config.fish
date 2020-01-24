@@ -33,3 +33,12 @@ source ~/.asdf/asdf.fish
 
 # krew
 set PATH ~/.krew/bin $PATH
+
+# stack
+set PATH ~/.local/bin $PATH
+
+# cargo
+set PATH ~/.cargo/bin $PATH
+
+# llvm
+set -g fish_user_paths "/usr/local/opt/llvm-9/bin" $fish_user_paths
