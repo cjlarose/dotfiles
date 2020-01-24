@@ -20,6 +20,9 @@ set hlsearch
 " Map fd in insert mode to esc
 inoremap fd <Esc>
 
+" Map fd in terminal mode to return to normal mode
+tnoremap fd <C-\><C-n>
+
 " Replace hash rockets with Ruby 1.9-style hashes
 let @h = ":s/:\\([^=,'\"]*\\) =>/\\1:/g\<C-m>"
 
