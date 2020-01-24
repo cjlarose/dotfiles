@@ -83,6 +83,9 @@ let g:neomake_typescript_eslint_maker = {
         \ 'output_stream': 'stdout',
         \ }
 
+" Enable hlint for haskell files
+let g:neomake_haskell_enabled_makers = ['hlint']
+
 " Turn on color scheme
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
