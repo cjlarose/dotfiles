@@ -2,7 +2,9 @@
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory extendedglob
+setopt appendhistory
+setopt hist_ignore_all_dups
+setopt extendedglob
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
