@@ -34,6 +34,10 @@ alias crtest='env CHROME_DEBUG=1 SEED=1337 bundle exec ruby -Itest'
 alias vim='nvim'
 alias gs='git status'
 
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # path settings
 export PATH="$HOME/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
@@ -41,10 +45,6 @@ export PATH="$HOME/.krew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # stack
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/llvm-9/bin:$PATH"
-
-# asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
