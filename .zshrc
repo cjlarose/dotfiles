@@ -48,5 +48,14 @@ export PATH="$HOME/.local/bin:$PATH" # stack
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/llvm-9/bin:$PATH"
 
+# send rg results though pager
+rg () {
+  if [ -t 1 ]; then
+    command rg --pretty --sort path "$@" | less
+  else
+    command rg --sort path "$@"
+  fi
+}
+
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
