@@ -25,7 +25,7 @@ setopt prompt_subst
 PROMPT='%~ %F{green}$(__git_ps1 "%s ")%f$ '
 
 # program preferences
-export EDITOR=nvim
+export EDITOR='nvredit-in-split-window'
 export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
 export THOR_MERGE='nvr -s -d'
 
