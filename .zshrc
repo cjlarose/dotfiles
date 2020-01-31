@@ -30,6 +30,7 @@ export LESS='--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
 export THOR_MERGE='nvr -s -d'
 
 # aliases
+alias be='bundle exec'
 alias rtest='env SEED=1337 bundle exec ruby -Itest'
 alias ptest='env MYCASE__TESTING__PARALLELISM__ENABLED=1 bundle exec ruby -Itest'
 alias crtest='env CHROME_DEBUG=1 SEED=1337 bundle exec ruby -Itest'
