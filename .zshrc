@@ -5,6 +5,7 @@ SAVEHIST=10000
 setopt appendhistory
 setopt hist_ignore_all_dups
 setopt extendedglob
+setopt no_nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
