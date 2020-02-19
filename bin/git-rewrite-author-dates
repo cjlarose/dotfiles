@@ -3,6 +3,10 @@
 
 base_branch=origin/develop
 merge_base=$(git merge-base HEAD $base_branch)
+
+existing_ref=$(git show-ref | grep 'refs/original' | awk '{print $2}')
+git update-ref -d "$existing_ref"
+
 git filter-branch \
   --setup 'START_TIME=`date +%s`' \
   --env-filter '
