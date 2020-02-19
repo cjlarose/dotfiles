@@ -122,7 +122,7 @@ endfunction
 function! s:fzf_list_tabs(...)
   let lines = []
   for t in sort(range(1, tabpagenr('$')), 's:sort_tabs_mru')
-    let pwd = getcwd(0, t)
+    let pwd = getcwd(-1, t)
     let pwd_last_component = get(split(pwd, '/'), -1, '')
     let line = printf("[%d]\t%s", t, pwd_last_component)
     call add(lines, line)
