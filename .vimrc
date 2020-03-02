@@ -140,6 +140,7 @@ command! -nargs=0 FzfTabs :call s:fzf_list_tabs()
 
 " Key mappings for fzf plugin
 nmap <leader>f :FzfGFiles<CR>
+nmap <leader>tt :FzfFiles<CR>
 nmap <leader>bb :FzfBuffers<CR>
 nmap <leader>c :FzfHistory:<CR>
 nmap <leader>gt :FzfTabs<CR>
