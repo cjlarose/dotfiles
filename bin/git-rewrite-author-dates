@@ -1,7 +1,12 @@
 #!/bin/bash
 # See https://github.com/isaacs/github/issues/386
 
-base_branch=origin/develop
+if [ -z "$1" ]; then
+  base_branch=origin/develop
+else
+  base_branch=$1
+fi
+
 merge_base=$(git merge-base HEAD $base_branch)
 
 existing_ref=$(git show-ref | grep 'refs/original' | awk '{print $2}')
