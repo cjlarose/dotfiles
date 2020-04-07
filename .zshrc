@@ -61,3 +61,6 @@ rg () {
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# completion for kubectl
+source <(kubectl completion zsh)
