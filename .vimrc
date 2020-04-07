@@ -100,6 +100,9 @@ let g:neomake_typescript_eslint_maker = {
 " Enable hlint for haskell files
 let g:neomake_haskell_enabled_makers = ['hlint']
 
+" Run prettier on save if config file is detected
+let g:prettier#autoformat_config_present = 1
+
 " Turn on color scheme
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
