@@ -63,4 +63,4 @@
 	url = https://github.com/junegunn/fzf.git
 [submodule "vim-plugins/vim-prettier"]
 	path = vim-plugins/vim-prettier
-	url = https://github.com/prettier/vim-prettier.git
+	url = https://github.com/cjlarose/vim-prettier.git
