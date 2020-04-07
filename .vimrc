@@ -70,8 +70,19 @@ set showtabline=0
 autocmd! BufWritePost * Neomake
 
 " Turn on eslint for typescript files
-let g:neomake_typescript_enabled_makers = ['tsc', 'eslint']
-"
+function! s:typescript_makers()
+  let l:makers = ['tsc']
+  if executable('eslint')
+    call add(l:makers, 'eslint')
+  endif
+  return l:makers
+endfunction
+
+augroup typescript_makers
+    autocmd!
+    autocmd Filetype typescript let b:neomake_typescript_enabled_makers = s:typescript_makers()
+augroup END
+
 " Do not execute eslint from cwd
 let g:neomake_javascript_eslint_maker = {
         \ 'args': ['--format=compact'],
