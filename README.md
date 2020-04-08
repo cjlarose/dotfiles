@@ -63,6 +63,12 @@ Then follow [instructions][asdf-nodejs] for bootstrapping trust with gpg.
 
 [asdf-nodejs]: https://github.com/asdf-vm/asdf-nodejs#using-a-dedicated-openpgp-keyring
 
+Add default plugin versions
+
+```sh
+ln -s $PWD/.tool-versions ~/.tool-versions
+```
+
 ## Shell
 
 ```sh
