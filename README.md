@@ -42,6 +42,18 @@ ln -s $PWD/vim-plugins ~/.local/share/nvim/site/pack/plugins/start
 pip3 install neovim-remote
 ```
 
+* Install the neovim npm package
+
+```sh
+npm install -g neovim
+```
+
+* Register remote plugins
+
+```vimscript
+:UpdateRemotePlugins
+```
+
 ## asdf
 
 Follow [official instructions][asdf] to install `asdf`.
