@@ -64,6 +64,3 @@
 [submodule "vim-plugins/vim-prettier"]
 	path = vim-plugins/vim-prettier
 	url = https://github.com/cjlarose/vim-prettier.git
-[submodule "vim-plugins/nvim-typescript"]
-	path = vim-plugins/nvim-typescript
-	url = https://github.com/mhartington/nvim-typescript.git
