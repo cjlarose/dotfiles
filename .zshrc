@@ -37,6 +37,7 @@ alias ptest='env MYCASE__TESTING__PARALLELISM__ENABLED=1 bundle exec ruby -Itest
 alias crtest='env CHROME_DEBUG=1 SEED=1337 bundle exec ruby -Itest'
 alias vim='nvim'
 alias gs='git status'
+alias load-kubectl-completions='source <(kubectl completion zsh)'
 
 # asdf
 . $HOME/.asdf/asdf.sh
@@ -61,6 +62,3 @@ rg () {
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# completion for kubectl
-source <(kubectl completion zsh)
