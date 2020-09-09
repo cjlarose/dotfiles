@@ -50,6 +50,7 @@ export PATH="$HOME/.krew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # stack
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/llvm-9/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # send rg results though pager
 rg () {
