@@ -8,6 +8,10 @@ setopt extendedglob
 setopt no_nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
+
+setopt sharehistory
+setopt incappendhistory
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/chris.larose/.zshrc'
 
