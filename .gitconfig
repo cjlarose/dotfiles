@@ -17,3 +17,5 @@
 	tool = nvr
 [mergetool "nvr"]
 	cmd = nvr -s -d $LOCAL $BASE $REMOTE $MERGED -c 'wincmd J | wincmd ='
+[pull]
+	ff = only
