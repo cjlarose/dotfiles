@@ -1,2 +1,2 @@
 #!/bin/sh
-exec bundle exec rubocop $@
+exec bundle exec rubocop $@ 2> /dev/null
