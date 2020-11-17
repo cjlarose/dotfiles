@@ -14,10 +14,11 @@ setopt incappendhistory
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/chris.larose/.zshrc'
+# End of lines added by compinstall
 
+fpath=($HOME/.asdf/completions $fpath)
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 # Allow command line editing in an external editor.
 autoload -Uz edit-command-line
