@@ -45,7 +45,6 @@ alias load-kubectl-completions='source <(kubectl completion zsh)'
 
 # asdf
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 # path settings
 export PATH="$HOME/bin:$PATH"
