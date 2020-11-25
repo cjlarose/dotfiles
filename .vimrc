@@ -45,9 +45,6 @@ augroup netrw_buf_hidden_fix
     \| endif
 augroup end
 
-" Highlight purescript files as if they were Haskell files
-au BufRead,BufNewFile *.purs set filetype=haskell
-
 " Fix syntax highlighting for tsx files
 au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
