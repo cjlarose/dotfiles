@@ -68,16 +68,6 @@ set signcolumn=yes
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
-
-" Run prettier on save if config file is detected
-let g:prettier#autoformat_config_present = 1
-
-" Turn on color scheme
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1
-set background=dark
-colorscheme hybrid
-
 " set prefix for FZF functions
 let g:fzf_command_prefix = 'Fzf'
 
@@ -128,73 +118,7 @@ nmap <leader>bb :FzfBuffers<CR>
 nmap <leader>c :FzfHistory:<CR>
 nmap <leader>gt :FzfTabs<CR>
 
-" Ack.vim config
-if executable('rg')
-  let g:ackprg = 'command rg --sort path --vimgrep'
-endif
-let g:ack_mappings = {
-  \ "<C-X>": "<C-W><CR><C-W>K",
-  \ "<C-V>": "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t" }
-
-" Search the project for a specified string
-nmap <leader>g :Ack!<space>
-
-" Search the project for the string under the cursor
-nmap <leader>w :Ack!<space><cword><CR>
-
-" Disable indenting for haskell
-let g:haskell_indent_disable = 1
-
-" autoformat settings
-noremap <leader>a :Autoformat<CR>
-let g:formatters_ruby = ['rubocop']
-let g:formatdef_rubocop = "'~/bin/rubocop-auto-correct-range '.a:firstline.' '.a:lastline.' '.bufname('%')"
-let g:formatters_haskell = ['brittany']
-let g:formatdef_brittany = '"brittany"'
-
-" Custom convenience function for creating logbook entries
-" https://routley.io/tech/2017/11/23/logbook.html
-nmap <leader>ln :LogbookNew<space>
-nmap <leader>ll :LogbookList<CR>
-
-" Shortcuts for vim-runner
-nmap <leader>rr :StartCommandRunner<CR>
-nmap <leader>rf :EnqueueTestRunCurrentFile<CR>
-nmap <leader>rt :EnqueueTestRunAtCurrentLine<CR>
-
-function! s:create_named_terminal_buffer(name, ...)
-  let term_command = a:0 >= 1 ? a:000 : &shell
-  enew
-  call termopen(term_command, {'cwd': getcwd()})
-  call s:rename_terminal_buffer(a:name)
-endfunction
-
-command! -nargs=+ CreateNamedShellTerminalBuffer :call s:create_named_terminal_buffer(<f-args>)
-nmap <leader>tn :CreateNamedShellTerminalBuffer<space>
-
-function! s:rename_terminal_buffer(name)
-  let b:term_title = a:name . ' (' . bufname('%') . ')'
-endfunction
-
-command! -nargs=1 RenameTerminalBuffer :call s:rename_terminal_buffer(<q-args>)
-nmap <leader>tr :RenameTerminalBuffer<space>
-
-command! -nargs=0 CreateGitTerminalBuffer :call s:create_named_terminal_buffer('git')
-nmap <leader>tg :CreateGitTerminalBuffer<CR>
-
-command! -nargs=0 CreateYarnWatchTerminalBuffer :call s:create_named_terminal_buffer('yarn', './bin/yarn', 'watch')
-nmap <leader>ty :CreateYarnWatchTerminalBuffer<CR>
-
-command! -nargs=0 CreateShoryukenWorkerTerminalBuffer :call s:create_named_terminal_buffer('worker', 'bundle', 'exec', 'shoryuken', '-R')
-nmap <leader>tw :CreateShoryukenWorkerTerminalBuffer<CR>
-
-command! -nargs=0 CreateRailsConsoleTerminalBuffer :call s:create_named_terminal_buffer('console', './bin/rails', 'console')
-nmap <leader>tc :CreateRailsConsoleTerminalBuffer<CR>
-
 " delete buffer but keep window open
 " https://superuser.com/questions/289285/how-to-close-buffer-without-closing-the-window
 command! DeleteBufferSafely :bn|:bd#
 nmap <leader>bd :DeleteBufferSafely<CR>
-
-" Disable default key bindings for vim-markdown
-let g:vim_markdown_no_default_key_mappings = 1
