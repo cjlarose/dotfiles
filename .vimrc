@@ -59,6 +59,9 @@ set scrolloff=0
 " Never show tabline
 set showtabline=0
 
+" Clear search highlight
+nmap <leader>n :nohlsearch<CR>
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
@@ -169,9 +172,6 @@ nmap <leader>g :Ack!<space>
 
 " Search the project for the string under the cursor
 nmap <leader>w :Ack!<space><cword><CR>
-
-" Clear search highlight
-nmap <leader>n :nohlsearch<CR>
 
 " Disable indenting for haskell
 let g:haskell_indent_disable = 1
