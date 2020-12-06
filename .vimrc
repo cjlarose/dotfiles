@@ -62,6 +62,9 @@ set showtabline=0
 " Clear search highlight
 nmap <leader>n :nohlsearch<CR>
 
+" Show signs in the line number column
+set signcolumn=number
+
 """"""""""""""""""""""""
 " PLUGIN CONFIGURATION "
 """"""""""""""""""""""""
