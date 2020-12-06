@@ -25,7 +25,7 @@ ln -s $PWD/.gitconfig ~/.gitconfig
 * Install Neovim & copy config
 
 ```
-brew install --HEAD neovim
+brew install neovim
 ln -s $PWD/.vimrc ~/.vimrc
 ```
 
