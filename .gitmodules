@@ -67,3 +67,6 @@
 [submodule "vim-plugins/purescript-vim"]
 	path = vim-plugins/purescript-vim
 	url = https://github.com/purescript-contrib/purescript-vim.git
+[submodule "vim-plugins/coc.nvim.git"]
+	path = vim-plugins/coc.nvim.git
+	url = https://github.com/neoclide/coc.nvim.git
