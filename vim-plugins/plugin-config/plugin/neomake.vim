@@ -30,4 +30,4 @@ let g:neomake_typescript_eslint_maker = {
         \ }
 
 " Enable hlint for haskell files
-let g:neomake_haskell_enabled_makers = ['hlint']
+let g:neomake_haskell_enabled_makers = []
