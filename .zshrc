@@ -12,6 +12,8 @@ bindkey -e
 setopt sharehistory
 setopt incappendhistory
 
+setopt auto_pushd
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/chris.larose/.zshrc'
 # End of lines added by compinstall
