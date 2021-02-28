@@ -72,4 +72,4 @@
 	url = https://github.com/neoclide/coc.nvim.git
 [submodule "vim-plugins/fzf-project"]
 	path = vim-plugins/fzf-project
-	url = git@github.com:benwainwright/fzf-project.git
+	url = git@github.com:cjlarose/fzf-project.git
