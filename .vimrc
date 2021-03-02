@@ -93,11 +93,37 @@ function! s:sort_tabs_mru(...)
 endfunction
 
 function! s:fzf_list_tabs(...)
-  let lines = []
+  let l:tabs = []
+  let l:longest_tab_number_length = 0
+  let l:longest_name_length = 0
+
   for t in sort(range(1, tabpagenr('$')), 's:sort_tabs_mru')
+    let tab_number = printf("[%d]", t)
     let pwd = getcwd(-1, t)
-    let pwd_formatted = fnamemodify(pwd, ":p:~")
-    let line = printf("[%d]\t%s", t, pwd_formatted)
+    let name = fnamemodify(pwd, ':t')
+
+    let l:tab_number_length = len(l:tab_number)
+    if l:tab_number_length > l:longest_tab_number_length
+      let l:longest_tab_number_length = l:tab_number_length
+    endif
+
+    let l:name_length = len(l:name)
+    if l:name_length > l:longest_name_length
+      let l:longest_name_length = l:name_length
+    endif
+
+    let tab = {
+      \ 'tab_number' : tab_number,
+      \ 'directory_path' : fnamemodify(pwd, ':p:~'),
+      \ 'directory_name' : name,
+      \ }
+    call add(l:tabs, tab)
+  endfor
+
+  let lines = []
+  let l:format = "%-" . l:longest_tab_number_length . "S %-" . l:longest_name_length . "S %s"
+  for tab in l:tabs
+    let line = printf(l:format, tab['tab_number'], tab['directory_name'], tab['directory_path'])
     call add(lines, line)
   endfor
 
