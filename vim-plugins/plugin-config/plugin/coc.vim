@@ -1,3 +1,7 @@
+let g:coc_global_extensions = [
+  \'coc-json',
+  \]
+
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
