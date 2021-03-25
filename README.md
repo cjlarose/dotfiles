@@ -42,6 +42,12 @@ ln -s $PWD/vim-plugins ~/.local/share/nvim/site/pack/plugins/start
 pip3 install neovim-remote
 ```
 
+* Configure coc
+
+```
+ln -s $PWD/coc-settings.json ~/.config/nvim/coc-settings.json
+```
+
 ## asdf
 
 Follow [official instructions][asdf] to install `asdf`.
