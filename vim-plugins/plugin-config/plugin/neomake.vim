@@ -3,7 +3,7 @@ autocmd! BufWritePost * Neomake
 
 " Turn on eslint for typescript files
 function! s:typescript_makers()
-  let l:makers = ['tsc']
+  let l:makers = []
   if executable('eslint')
     call add(l:makers, 'eslint')
   endif
