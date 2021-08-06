@@ -71,6 +71,9 @@ set signcolumn=yes
 " set prefix for FZF functions
 let g:fzf_command_prefix = 'Fzf'
 
+" disable fzf preview
+let g:fzf_preview_window = []
+
 " Quickly switch tabs with fzf
 if !exists('g:fzf_tabs_mru')
   let g:fzf_tabs_mru = {}
