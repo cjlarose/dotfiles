@@ -1,5 +1,6 @@
 " Map leader key to ,
-let mapleader = ","
+nnoremap <SPACE> <Nop>
+let mapleader = " "
 
 " Enable both relative number and number to turn on 'hybrid mode'
 set relativenumber
