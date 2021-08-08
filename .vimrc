@@ -29,6 +29,8 @@ nmap <silent> <leader>h :wincmd h<CR>
 nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
+nmap <silent> <leader>o :wincmd o<CR>
+nmap <silent> <leader>= :wincmd =<CR>
 noremap <C-w> <Nop>
 
 " Replace hash rockets with Ruby 1.9-style hashes
